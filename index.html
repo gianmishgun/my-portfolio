@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Mikhail Lysyi | CV</title>
@@ -8,111 +8,34 @@
 </head>
 <body class="light">
   <header>
-    <h1 id="name">Михаил Лысый</h1>
-    <p id="subtitle" class="subtitle">Преподаватель английского | Путешественник | Организатор</p>
+    <h1 id="name">Mikhail Lysyi</h1>
+    <p id="subtitle" class="subtitle">English Teacher | Traveler | Organizer</p>
     
     <div class="controls">
-      <button onclick="toggleLang()">🌐 RU / EN</button>
+      <button onclick="toggleLang()">🌐 EN / RU</button>
       <button onclick="toggleTheme()">🌙 / ☀️</button>
     </div>
   </header>
 
   <main>
     <section>
-      <h2 id="about-title">Обо мне</h2>
-      <p id="about-text">Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.</p>
+      <h2 id="about-title">About Me</h2>
+      <p id="about-text">Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.</p>
     </section>
 
-    <!-- Начало секции таймлайна -->
+    <!-- Секция образования перенесена выше -->
     <section>
-        <h2 id="timeline-title">Мой путь</h2>
-        <div id="timeline" class="timeline">
-            <div class="timeline-item" data-year="2016">
-                <div class="timeline-content">
-                    <h3>Начало пути в туризме</h3>
-                    <p>Стал сафари-гидом в Финляндии, где организовывал туры и обучал новых гидов.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-year="2018">
-                <div class="timeline-content">
-                    <h3>Старт в преподавании</h3>
-                    <p>Начал карьеру преподавателя английского языка, готовя студентов к международным экзаменам.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-year="2021">
-                <div class="timeline-content">
-                    <h3>Волонтёрство и музыка</h3>
-                    <p>Совмещал помощь людям с творчеством, работая пианистом в Турции.</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-year="2023">
-                <div class="timeline-content">
-                    <h3>Новый этап в образовании</h3>
-                    <p>Поступил в Matej Bel University в Словакии и стал организатором Erasmus ESN.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Конец секции таймлайна -->
-
-    <section>
-      <h2 id="work-title">Опыт работы</h2>
-      <ul id="work-list">
-        <li><strong>Преподаватель английского</strong> (2018–наст.вр.) — подготовка студентов к SAT, IELTS, TOEFL</li>
-        <li><strong>Сафари-гид</strong> (2016–2018, Финляндия) — организация туров, обучение новых гидов</li>
-        <li><strong>Тех. специалист Uberfon</strong> (2017, Россия) — ремонт устройств Apple</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 id="edu-title">Образование</h2>
+      <h2 id="edu-title">Education</h2>
       <ul id="edu-list">
-        <li><strong>Бакалавр экономики и менеджмента</strong>, Matej Bel University (2023–2026)</li>
-        <li>Курсы: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>
+        <li><strong>Bachelor of Business Economics and Management</strong>, Matej Bel University (2023–2026)</li>
+        <li>Courses: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>
       </ul>
-      <p><a href="cv.pdf" download id="cv-link">📄 Скачать CV</a></p>
+      <p><a href="cv.pdf" download id="cv-link">📄 Download CV</a></p>
     </section>
 
     <section>
-      <h2 id="vol-title">Волонтёрство</h2>
-      <ul id="vol-list">
-        <li>Организатор Erasmus ESN, Словакия (2023–2026)</li>
-        <li>Преподаватель плавания, Румыния (2022–2023)</li>
-        <li>Социальные проекты, Грузия (2022)</li>
-        <li>Пианист, Турция (2021)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 id="skills-title">Навыки и языки</h2>
-      <p id="skills-text"><strong>Языки:</strong> Русский (родной), Английский (C1), Словацкий (B1), Немецкий (A2), Французский (A1), Финский (A1)</p>
-    </section>
-
-    <section>
-      <h2 id="contacts-title">Контакты</h2>
-      <p>Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
-      <p>Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
-      <p>GitHub: <a href="https://github.com/gianmishgun">https://github.com/gianmishgun</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Михаил Лысый</p>
-  </footer>
-
-  <script>
-    let lang = "ru";
-
-    function toggleLang() {
-      if (lang === "ru") {
-        document.getElementById("name").innerText = "Mikhail Lysyi";
-        document.getElementById("subtitle").innerText = "English Teacher | Traveler | Organizer";
-        document.getElementById("about-title").innerText = "About Me";
-        document.getElementById("about-text").innerText = "Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.";
-        
-        // Перевод таймлайна
-        document.getElementById("timeline-title").innerText = "My Journey";
-        document.getElementById("timeline").innerHTML = `
+        <h2 id="timeline-title">My Journey</h2>
+        <div id="timeline" class="timeline">
             <div class="timeline-item" data-year="2016">
                 <div class="timeline-content">
                     <h3>Beginning in Tourism</h3>
@@ -136,31 +59,111 @@
                     <h3>New Stage in Education</h3>
                     <p>Enrolled at Matej Bel University in Slovakia and became an Erasmus ESN organizer.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <h2 id="work-title">Work Experience</h2>
+      <ul id="work-list">
+        <li><strong>English Teacher</strong> (2018–present) — preparing students for SAT, IELTS, TOEFL</li>
+        <li><strong>Safari Guide</strong> (2016–2018, Finland) — tours and training new guides</li>
+        <li><strong>Technical Specialist, Uberfon</strong> (2017, Russia) — Apple device repairs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="vol-title">Volunteering</h2>
+      <ul id="vol-list">
+        <li>Erasmus ESN Organizer, Slovakia (2023–2026)</li>
+        <li>Swimming Teacher, Romania (2022–2023)</li>
+        <li>Community Projects, Georgia (2022)</li>
+        <li>Pianist, Turkey (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="skills-title">Skills & Languages</h2>
+      <p id="skills-text"><strong>Languages:</strong> Russian (native), English (C1), Slovak (B1), German (A2), French (A1), Finnish (A1)</p>
+    </section>
+
+    <section>
+      <h2 id="contacts-title">Contacts</h2>
+      <p>Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
+      <p>Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
+      <p>GitHub: <a href="https://github.com/your-username">https://github.com/your-username</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Mikhail Lysyi</p>
+  </footer>
+
+  <script>
+    // Основной язык теперь английский
+    let lang = "en";
+
+    function toggleLang() {
+      if (lang === "en") {
+        // Переключаемся на русский
+        document.getElementById("name").innerText = "Михаил Лысый";
+        document.getElementById("subtitle").innerText = "Преподаватель английского | Путешественник | Организатор";
+        document.getElementById("about-title").innerText = "Обо мне";
+        document.getElementById("about-text").innerText = "Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.";
+        
+        document.getElementById("edu-title").innerText = "Образование";
+        document.getElementById("edu-list").innerHTML = `
+          <li><strong>Бакалавр экономики и менеджмента</strong>, Matej Bel University (2023–2026)</li>
+          <li>Курсы: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>`;
+        document.getElementById("cv-link").innerText = "📄 Скачать CV";
+
+        document.getElementById("timeline-title").innerText = "Мой путь";
+        document.getElementById("timeline").innerHTML = `
+            <div class="timeline-item" data-year="2016">
+                <div class="timeline-content">
+                    <h3>Начало пути в туризме</h3>
+                    <p>Стал сафари-гидом в Финляндии, где организовывал туры и обучал новых гидов.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2018">
+                <div class="timeline-content">
+                    <h3>Старт в преподавании</h3>
+                    <p>Начал карьеру преподавателя английского языка, готовя студентов к международным экзаменам.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2021">
+                <div class="timeline-content">
+                    <h3>Волонтёрство и музыка</h3>
+                    <p>Совмещал помощь людям с творчеством, работая пианистом в Турции.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2023">
+                <div class="timeline-content">
+                    <h3>Новый этап в образовании</h3>
+                    <p>Поступил в Matej Bel University в Словакии и стал организатором Erasmus ESN.</p>
+                </div>
             </div>`;
 
-        document.getElementById("work-title").innerText = "Work Experience";
+        document.getElementById("work-title").innerText = "Опыт работы";
         document.getElementById("work-list").innerHTML = `
-          <li><strong>English Teacher</strong> (2018–present) — preparing students for SAT, IELTS, TOEFL</li>
-          <li><strong>Safari Guide</strong> (2016–2018, Finland) — tours and training new guides</li>
-          <li><strong>Technical Specialist, Uberfon</strong> (2017, Russia) — Apple device repairs</li>`;
-        document.getElementById("edu-title").innerText = "Education";
-        document.getElementById("edu-list").innerHTML = `
-          <li><strong>Bachelor of Business Economics and Management</strong>, Matej Bel University (2023–2026)</li>
-          <li>Courses: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>`;
-        document.getElementById("cv-link").innerText = "📄 Download CV";
-        document.getElementById("vol-title").innerText = "Volunteering";
+          <li><strong>Преподаватель английского</strong> (2018–наст.вр.) — подготовка студентов к SAT, IELTS, TOEFL</li>
+          <li><strong>Сафари-гид</strong> (2016–2018, Финляндия) — организация туров, обучение новых гидов</li>
+          <li><strong>Тех. специалист Uberfon</strong> (2017, Россия) — ремонт устройств Apple</li>`;
+        
+        document.getElementById("vol-title").innerText = "Волонтёрство";
         document.getElementById("vol-list").innerHTML = `
-          <li>Erasmus ESN Organizer, Slovakia (2023–2026)</li>
-          <li>Swimming Teacher, Romania (2022–2023)</li>
-          <li>Community Projects, Georgia (2022)</li>
-          <li>Pianist, Turkey (2021)</li>`;
-        document.getElementById("skills-title").innerText = "Skills & Languages";
-        document.getElementById("skills-text").innerText = "Languages: Russian (native), English (C1), Slovak (B1), German (A2), French (A1), Finnish (A1)";
-        document.getElementById("contacts-title").innerText = "Contacts";
-        document.querySelector("footer p").innerText = "© 2025 Mikhail Lysyi";
-        lang = "en";
+          <li>Организатор Erasmus ESN, Словакия (2023–2026)</li>
+          <li>Преподаватель плавания, Румыния (2022–2023)</li>
+          <li>Социальные проекты, Грузия (2022)</li>
+          <li>Пианист, Турция (2021)</li>`;
+        document.getElementById("skills-title").innerText = "Навыки и языки";
+        document.getElementById("skills-text").innerText = "<strong>Языки:</strong> Русский (родной), Английский (C1), Словацкий (B1), Немецкий (A2), Французский (A1), Финский (A1)";
+        document.getElementById("contacts-title").innerText = "Контакты";
+        document.querySelector("footer p").innerText = "© 2025 Михаил Лысый";
+        lang = "ru";
       } else {
-        location.reload(); // вернём всё в RU
+        // Возвращаемся на английский по умолчанию
+        location.reload(); 
       }
     }
 
