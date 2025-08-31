@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Mikhail Lysyi | CV</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="light">
   <header>
@@ -21,6 +22,38 @@
       <h2 id="about-title">Обо мне</h2>
       <p id="about-text">Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.</p>
     </section>
+
+    <!-- Начало секции таймлайна -->
+    <section>
+        <h2 id="timeline-title">Мой путь</h2>
+        <div id="timeline" class="timeline">
+            <div class="timeline-item" data-year="2016">
+                <div class="timeline-content">
+                    <h3>Начало пути в туризме</h3>
+                    <p>Стал сафари-гидом в Финляндии, где организовывал туры и обучал новых гидов.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2018">
+                <div class="timeline-content">
+                    <h3>Старт в преподавании</h3>
+                    <p>Начал карьеру преподавателя английского языка, готовя студентов к международным экзаменам.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2021">
+                <div class="timeline-content">
+                    <h3>Волонтёрство и музыка</h3>
+                    <p>Совмещал помощь людям с творчеством, работая пианистом в Турции.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2023">
+                <div class="timeline-content">
+                    <h3>Новый этап в образовании</h3>
+                    <p>Поступил в Matej Bel University в Словакии и стал организатором Erasmus ESN.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Конец секции таймлайна -->
 
     <section>
       <h2 id="work-title">Опыт работы</h2>
@@ -59,7 +92,7 @@
       <h2 id="contacts-title">Контакты</h2>
       <p>Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
       <p>Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
-      <p>GitHub: <a href="https://github.com/gianmishgun">https://github.com/gianmishgun</a></p>
+      <p>GitHub: <a href="https://github.com/ТВОЙ-НИК">https://github.com/ТВОЙ-НИК</a></p>
     </section>
   </main>
 
@@ -76,6 +109,35 @@
         document.getElementById("subtitle").innerText = "English Teacher | Traveler | Organizer";
         document.getElementById("about-title").innerText = "About Me";
         document.getElementById("about-text").innerText = "Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.";
+        
+        // Перевод таймлайна
+        document.getElementById("timeline-title").innerText = "My Journey";
+        document.getElementById("timeline").innerHTML = `
+            <div class="timeline-item" data-year="2016">
+                <div class="timeline-content">
+                    <h3>Beginning in Tourism</h3>
+                    <p>Became a safari guide in Finland, organizing tours and training new guides.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2018">
+                <div class="timeline-content">
+                    <h3>Start in Teaching</h3>
+                    <p>Started a career as an English teacher, preparing students for international exams.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2021">
+                <div class="timeline-content">
+                    <h3>Volunteering and Music</h3>
+                    <p>Combined helping people with creativity, working as a pianist in Turkey.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2023">
+                <div class="timeline-content">
+                    <h3>New Stage in Education</h3>
+                    <p>Enrolled at Matej Bel University in Slovakia and became an Erasmus ESN organizer.</p>
+                </div>
+            </div>`;
+
         document.getElementById("work-title").innerText = "Work Experience";
         document.getElementById("work-list").innerHTML = `
           <li><strong>English Teacher</strong> (2018–present) — preparing students for SAT, IELTS, TOEFL</li>
