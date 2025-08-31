@@ -1,10 +1,11 @@
+/* Основные стили */
 body {
   font-family: Arial, sans-serif;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
-  background: #f4f4f9;
-  color: #333;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -12,25 +13,43 @@ header {
   margin-bottom: 30px;
 }
 
-.avatar {
-  border-radius: 50%;
-  width: 120px;
-  margin-bottom: 15px;
-}
-
-h1 {
-  margin: 10px 0 5px;
-}
-
 .subtitle {
-  color: #555;
+  color: gray;
   font-style: italic;
 }
 
+.controls {
+  margin-top: 15px;
+}
+
+.controls button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ccc;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #999;
+  color: white;
+}
+
 h2 {
-  margin-top: 30px;
+  margin-top: 25px;
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
 
 a {
@@ -46,6 +65,21 @@ footer {
   text-align: center;
   margin-top: 40px;
   font-size: 0.9em;
-  color: #777;
+}
+
+/* Светлая тема */
+body.light {
+  background: #f9f9fb;
+  color: #333;
+}
+
+/* Тёмная тема */
+body.dark {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark a {
+  color: #66aaff;
 }
 

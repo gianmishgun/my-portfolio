@@ -2,45 +2,111 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Мой сайт-визитка</title>
+  <title>Mikhail Lysyi | CV</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light">
   <header>
-    <img src="https://via.placeholder.com/120" alt="Фото" class="avatar">
-    <h1>Иван Иванов</h1>
-    <p class="subtitle">Web-разработчик | Data Analyst | Python</p>
+    <h1 id="name">Михаил Лысый</h1>
+    <p id="subtitle" class="subtitle">Преподаватель английского | Путешественник | Организатор</p>
+    
+    <div class="controls">
+      <button onclick="toggleLang()">🌐 RU / EN</button>
+      <button onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
   </header>
 
   <main>
     <section>
-      <h2>Обо мне</h2>
-      <p>Привет! Я занимаюсь веб-разработкой и аналитикой данных. Люблю создавать проекты и учиться новому.</p>
+      <h2 id="about-title">Обо мне</h2>
+      <p id="about-text">Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.</p>
     </section>
 
     <section>
-      <h2>Резюме</h2>
-      <p><a href="cv.pdf" download>📄 Скачать CV</a></p>
-    </section>
-
-    <section>
-      <h2>Проекты</h2>
-      <ul>
-        <li><a href="https://github.com/ТВОЙ-НИК/проект1">Проект 1</a></li>
-        <li><a href="https://github.com/ТВОЙ-НИК/проект2">Проект 2</a></li>
+      <h2 id="work-title">Опыт работы</h2>
+      <ul id="work-list">
+        <li><strong>Преподаватель английского</strong> (2018–наст.вр.) — подготовка студентов к SAT, IELTS, TOEFL</li>
+        <li><strong>Сафари-гид</strong> (2016–2018, Финляндия) — организация туров, обучение новых гидов</li>
+        <li><strong>Тех. специалист Uberfon</strong> (2017, Россия) — ремонт устройств Apple</li>
       </ul>
     </section>
 
     <section>
-      <h2>Контакты</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <h2 id="edu-title">Образование</h2>
+      <ul id="edu-list">
+        <li><strong>Бакалавр экономики и менеджмента</strong>, Matej Bel University (2023–2026)</li>
+        <li>Курсы: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>
+      </ul>
+      <p><a href="cv.pdf" download id="cv-link">📄 Скачать CV</a></p>
+    </section>
+
+    <section>
+      <h2 id="vol-title">Волонтёрство</h2>
+      <ul id="vol-list">
+        <li>Организатор Erasmus ESN, Словакия (2023–2026)</li>
+        <li>Преподаватель плавания, Румыния (2022–2023)</li>
+        <li>Социальные проекты, Грузия (2022)</li>
+        <li>Пианист, Турция (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="skills-title">Навыки и языки</h2>
+      <p id="skills-text"><strong>Языки:</strong> Русский (родной), Английский (C1), Словацкий (B1), Немецкий (A2), Французский (A1), Финский (A1)</p>
+    </section>
+
+    <section>
+      <h2 id="contacts-title">Контакты</h2>
+      <p>Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
+      <p>Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
       <p>GitHub: <a href="https://github.com/ТВОЙ-НИК">https://github.com/ТВОЙ-НИК</a></p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Иван Иванов</p>
+    <p>© 2025 Михаил Лысый</p>
   </footer>
+
+  <script>
+    let lang = "ru";
+
+    function toggleLang() {
+      if (lang === "ru") {
+        document.getElementById("name").innerText = "Mikhail Lysyi";
+        document.getElementById("subtitle").innerText = "English Teacher | Traveler | Organizer";
+        document.getElementById("about-title").innerText = "About Me";
+        document.getElementById("about-text").innerText = "Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.";
+        document.getElementById("work-title").innerText = "Work Experience";
+        document.getElementById("work-list").innerHTML = `
+          <li><strong>English Teacher</strong> (2018–present) — preparing students for SAT, IELTS, TOEFL</li>
+          <li><strong>Safari Guide</strong> (2016–2018, Finland) — tours and training new guides</li>
+          <li><strong>Technical Specialist, Uberfon</strong> (2017, Russia) — Apple device repairs</li>`;
+        document.getElementById("edu-title").innerText = "Education";
+        document.getElementById("edu-list").innerHTML = `
+          <li><strong>Bachelor of Business Economics and Management</strong>, Matej Bel University (2023–2026)</li>
+          <li>Courses: Harvard (Justice), MIT (Macroeconomics, Cryptocurrencies), Lapland University (Business)</li>`;
+        document.getElementById("cv-link").innerText = "📄 Download CV";
+        document.getElementById("vol-title").innerText = "Volunteering";
+        document.getElementById("vol-list").innerHTML = `
+          <li>Erasmus ESN Organizer, Slovakia (2023–2026)</li>
+          <li>Swimming Teacher, Romania (2022–2023)</li>
+          <li>Community Projects, Georgia (2022)</li>
+          <li>Pianist, Turkey (2021)</li>`;
+        document.getElementById("skills-title").innerText = "Skills & Languages";
+        document.getElementById("skills-text").innerText = "Languages: Russian (native), English (C1), Slovak (B1), German (A2), French (A1), Finnish (A1)";
+        document.getElementById("contacts-title").innerText = "Contacts";
+        document.querySelector("footer p").innerText = "© 2025 Mikhail Lysyi";
+        lang = "en";
+      } else {
+        location.reload(); // вернём всё в RU
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+    }
+  </script>
 </body>
 </html>
 
