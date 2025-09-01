@@ -4,8 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang-key="page_title">Mikhail Lysyi | Personal Website</title>
+    
     <style>
-        /* ...styles unchanged... */
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #fff;
+            --accent-color: #007bff;
+            --border-color: #ddd;
+            --timeline-line: #ccc;
+            --shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        body.dark-theme {
+            --bg-color: #121212;
+            --text-color: #f1f1f1;
+            --header-bg: #1e1e1e;
+            --accent-color: #4dabf7;
+            --border-color: #444;
+            --timeline-line: #555;
+            --shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header {
+            background-color: var(--header-bg);
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .header-title h1 { margin: 0; }
+        .header-title p { margin: 5px 0 0; opacity: 0.8; }
+        .controls { display: flex; align-items: center; gap: 15px; margin-top: 10px; }
+        .controls button { background: none; border: 1px solid var(--border-color); color: var(--text-color); padding: 5px 10px; cursor: pointer; border-radius: 5px; }
+        nav ul { display: flex; gap: 20px; list-style: none; padding: 0; margin: 20px 0 0; border-bottom: 1px solid var(--border-color); }
+        nav li { padding: 10px 5px; cursor: pointer; border-bottom: 3px solid transparent; }
+        nav li.active { border-bottom-color: var(--accent-color); color: var(--accent-color); font-weight: bold; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h2, h3, h4 { color: var(--text-color); }
+        ul { padding-left: 20px; }
+        .timeline {
+            border-left: 2px solid var(--timeline-line);
+            padding: 20px 0 20px 30px;
+            position: relative;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            background: var(--header-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .timeline-item::before {
+            content: attr(data-year);
+            position: absolute;
+            left: -140px; 
+            width: 80px;
+            text-align: right;
+            top: 20px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            border: 3px solid var(--accent-color);
+        }
+        .skills-languages { display: flex; gap: 30px; flex-wrap: wrap; }
+        .skills-list, .languages-table { flex: 1; min-width: 280px; }
+        .languages-table table { width: 100%; border-collapse: collapse; }
+        .languages-table th, .languages-table td { border: 1px solid var(--border-color); padding: 8px; text-align: left; }
     </style>
 </head>
 <body class="light-theme">
@@ -91,7 +178,7 @@
             <div class="timeline">
                 <article class="timeline-item" data-year="2023-2026">
                     <h4 data-lang-key="vol1_title"></h4>
-                    <p data-lang-key="vol1_loc"></p>
+                    <p><i data-lang-key="vol1_loc"></i></p>
                     <ul data-lang-key="vol1_desc"></ul>
                 </article>
                 <article class="timeline-item" data-year="2022-2023">
@@ -111,7 +198,7 @@
                 </article>
                 <article class="timeline-item" data-year="2021">
                     <h4 data-lang-key="vol5_title"></h4>
-                    <p data-lang-key="vol5_loc"></p>
+                    <p><i data-lang-key="vol5_loc"></i></p>
                     <p data-lang-key="vol5_desc"></p>
                 </article>
             </div>
@@ -148,14 +235,6 @@
                     </table>
                 </div>
             </div>
-
-            <!-- Reference Letters Section -->
-            <section id="reference-letters">
-                <h3 data-lang-key="reference_letters_title">Reference Letters</h3>
-                <ul data-lang-key="reference_letters_list">
-                    <li>Available upon request.</li>
-                </ul>
-            </section>
         </section>
 
         <section id="about" class="tab-content">
@@ -164,6 +243,7 @@
             <h3 data-lang-key="interests_title">Hobbies and Interests</h3>
             <ul data-lang-key="interests_list"></ul>
         </section>
+
     </main>
 
     <script>
@@ -181,7 +261,6 @@
                 }
             });
             document.getElementById('theme-toggle').addEventListener('click', () => document.body.classList.toggle('dark-theme'));
-
             const translations = {
                 en: {
                     page_title: "Mikhail Lysyi | Personal Website", name: "Mikhail Lysyi", subtitle: "English Teacher | Traveler | Organizer",
@@ -203,8 +282,7 @@
                     work3_title: "Junior Technical Specialist | Uberfon", work3_loc: "Saint Petersburg, Russia",
                     work3_desc: "<li>Performing professional repairs on Apple devices in a team of specialists.</li><li>Quick learning of new Apple product features and reparation processes.</li><li>Reporting, cash register management, and communication with suppliers.</li>",
                     volunteer_title: "Volunteer Work",
-                    vol1_title: "Erasmus Student Volunteer, Organizator | ESN",
-                    vol1_loc: 'Matej Bel University, Banská Bystrica',
+                    vol1_title: 'Erasmus Student Volunteer, Organizator | ESN', vol1_loc: '<a href="https://www.esn.sk/" target="_blank">Matej Bel University, Banská Bystrica</a>',
                     vol1_desc: "<li>Participating in budget decision-making.</li><li>Event management.</li><li>Monitoring of incoming student wellbeing.</li>",
                     vol2_title: 'Swimming teacher, tutor | CERT / <a href="https://youth.europa.eu/solidarity_en" target="_blank">European Solidarity Corps</a>', vol2_loc: "Craiova, Romania",
                     vol2_desc: "Organizing non-formal education classes, promoting healthy lifestyle and European values, teaching swimming to kids, and supporting cultural events.",
@@ -212,8 +290,7 @@
                     vol3_desc: "Creating wooden furniture in remote villages and caring for adults with disabilities.",
                     vol4_title: 'Photographer | <a href="https://www.lapinamk.fi/en/Cooperation/RDI-Projects/InnoBarentsLab" target="_blank">InnoBarentsLab</a>', vol4_loc: "Rovaniemi, Finland",
                     vol4_desc: "Creating media materials for seminars: Arctic Design Week, Northern Stars Seminar.",
-                    vol5_title: "Pianist",
-                    vol5_loc: 'Erciyes Culture Centre, Kayseri, Turkey',
+                    vol5_title: "Pianist | Erciyes Culture Centre", vol5_loc: '<a href="https://www.erciyes.edu.tr/tr/etkinlik-detay/bir-gun-degil-her-gun-3-aralik/7214" target="_blank">Kayseri, Turkey</a>',
                     vol5_desc: 'Piano performance at the International Day of Disabled Persons: “Bir Gün Değil, Her Gün 3 Aralık”.',
                     skills_lang_title: "Skills & Languages", skills_subtitle: "Skills", lang_subtitle: "Languages",
                     lang_header_lang: "Language", lang_header_level: "Level", lang_ru: "Russian", level_native: "Native",
@@ -221,45 +298,90 @@
                     about_text: "A versatile and adaptable professional with a rich background in education, tourism, and technical services across multiple countries. Passionate about lifelong learning, cultural exchange, and community engagement, demonstrated through extensive volunteer work—from teaching and event organization to hands-on roles like carpentry and photography. Proven ability to work independently and in international teams, always bringing a communicative, punctual, and polite approach to every challenge.",
                     interests_title: "Hobbies and Interests",
                     interests_list: "<li>Traveling and exploring different cultures</li><li>Playing the piano</li><li>Photography</li><li>Learning new languages</li><li>Woodworking and handicrafts</li>",
-                    reference_letters_title: "Reference Letters",
-                    reference_letters_list: "<li>Available upon request.</li>",
                 },
                 ru: {
-                    // ...Russian translations, same structure with vol1_title: "Волонтер Erasmus, организатор | ESN", vol5_title: "Пианист", etc...
+                    page_title: "Михаил Лысый | Персональный сайт", name: "Михаил Лысый", subtitle: "Учитель английского | Путешественник | Организатор",
+                    tab_home: "Главная", tab_cv: "Резюме", tab_about: "Обо мне",
+                    home_title: "Контактная информация", email_label: "Email:", social_label: "Социальные сети:",
+                    cv_title: "Резюме", download_cv: "📄 Скачать резюме",
+                    education_title: "Образование",
+                    edu1_title: "Бакалавр экономики и управления в бизнесе", edu1_uni: '<a href="https://www.umb.sk/en/" target="_blank">Университет Матея Бела</a>', edu1_loc: "Банска-Бистрица, Словакия",
+                    edu1_desc: '<li>Студенческая научная деятельность (2024) - Исследование злоупотреблений ИИ. (<a href="https://konferencie.ef.umb.sk/SVA_24/2_EMP/prispevok/2_Lysyi_Oleshko.pdf" target="_blank">Полный текст статьи</a>)</li><li>Международный бизнес-конкурс от Вышеградского фонда (2025) - капитан команды-победителя. (<a href="https://fir.vse.cz/news/from-mystery-to-mastery-v4-students-competed-in-business-case-competition/" target="_blank">Читать далее</a>)</li>',
+                    edu2_title: "Бакалавр делового администрирования в международном бизнесе", edu2_uni: '<a href="https://www.lapinamk.fi/en/" target="_blank">Университет прикладных наук Лапландии</a>', edu2_loc: "Рованиеми, Финляндия",
+                    edu2_desc: "Не окончено из-за недостатка средств.",
+                    add_courses_title: "Дополнительные курсы",
+                    add_courses_list: '<li><a href="https://uni-eszterhazy.hu/en" target="_blank">Университет Токая</a> (летняя школа: культурология)</li><li><a href="https://www.ulapland.fi/EN" target="_blank">Университет Лапландии</a> (деловое администрирование, экономика)</li><li><a href="https://arzamas.academy/" target="_blank">Arzamas Academy</a> (языки, история, обществознание)</li><li>Гарвардский колледж (через <a href="https://www.edx.org/" target="_blank">edX.org</a>: правосудие)</li><li>MIT (через <a href="https://ocw.mit.edu/" target="_blank">OpenCourseWare</a>: макроэкономика; криптовалюты)</li>',
+                    work_title: "Опыт работы",
+                    work1_title: "Преподаватель английского языка | Частная практика",
+                    work1_desc: "<li>Разработка методологии и создание индивидуальных программ обучения.</li><li>Успешно обучил 5 студентов с начального до разговорного уровня.</li><li>Подготовка к экзаменам SAT, IELTS, TOEFL.</li>",
+                    work2_title: "Сафари и туристический гид", work2_loc: "Рованиеми, Финляндия",
+                    work2_desc: '<li>Компании: <a href="https://laplandwelcome.fi/" target="_blank">Lapland Welcome LTD</a>, <a href="https://www.wonderlapland.com/" target="_blank">Wander Lapland LTD</a>, Helios Tour LTD.</li><li>Работа в международной команде, проведение зимних туристических мероприятий (поездки на снегоходах, подледная рыбалка и т.д.).</li><li>Обучение младших гидов.</li><li>Продажи, управление базами данных и коммуникация с партнерами.</li><li>Получил положительные отзывы, ноль несчастных случаев.</li>',
+                    work3_title: "Младший технический специалист | Uberfon", work3_loc: "Санкт-Петербург, Россия",
+                    work3_desc: "<li>Профессиональный ремонт устройств Apple в команде специалистов.</li><li>Быстрое изучение новых продуктов и процессов ремонта Apple.</li><li>Ведение отчетности, работа с кассой и общение с поставщиками.</li>",
+                    volunteer_title: "Волонтерская работа",
+                    vol1_title: 'Волонтер Erasmus, организатор | ESN', vol1_loc: '<a href="https://www.esn.sk/" target="_blank">Университет Матея Бела, Банска-Бистрица</a>',
+                    vol1_desc: "<li>Участие в принятии бюджетных решений.</li><li>Организация мероприятий.</li><li>Мониторинг благополучия прибывающих студентов.</li>",
+                    vol2_title: 'Учитель плавания, тьютор | CERT / <a href="https://youth.europa.eu/solidarity_en" target="_blank">Европейский корпус солидарности</a>', vol2_loc: "Крайова, Румыния",
+                    vol2_desc: "Организация неформальных образовательных занятий, продвижение здорового образа жизни и европейских ценностей, обучение детей плаванию и поддержка культурных мероприятий.",
+                    vol3_title: "Плотник, садовник, мастер, пастух", vol3_loc: "Грузия",
+                    vol3_desc: "Создание деревянной мебели в отдаленных деревнях и уход за взрослыми с ограниченными возможностями.",
+                    vol4_title: 'Фотограф | <a href="https://www.lapinamk.fi/en/Cooperation/RDI-Projects/InnoBarentsLab" target="_blank">InnoBarentsLab</a>', vol4_loc: "Рованиеми, Финляндия",
+                    vol4_desc: "Создание медиаматериалов для семинаров: Arctic Design Week, Northern Stars Seminar.",
+                    vol5_title: "Пианист | Культурный центр Эрджиес", vol5_loc: '<a href="https://www.erciyes.edu.tr/tr/etkinlik-detay/bir-gun-degil-her-gun-3-aralik/7214" target="_blank">Кайсери, Турция</a>',
+                    vol5_desc: 'Выступление с фортепиано на Международном дне инвалидов: “Bir Gün Değil, Her Gün 3 Aralık”.',
+                    skills_lang_title: "Навыки и языки", skills_subtitle: "Навыки", lang_subtitle: "Языки",
+                    lang_header_lang: "Язык", lang_header_level: "Уровень", lang_ru: "Русский", level_native: "Родной",
+                    about_title: "Обо мне",
+                    about_text: "Разносторонний и легко адаптирующийся специалист с богатым опытом в образовании, туризме и технических услугах в нескольких странах. Увлечен обучением на протяжении всей жизни, культурным обменом и общественной деятельностью, что подтверждается обширной волонтерской работой — от преподавания и организации мероприятий до практических ролей, таких как плотницкое дело и фотография. Доказанная способность работать как самостоятельно, так и в международных командах, всегда применяя коммуникативный, пунктуальный и вежливый подход к любой задаче.",
+                    interests_title: "Хобби и интересы",
+                    interests_list: "<li>Путешествия и изучение разных культур</li><li>Игра на фортепиано</li><li>Фотография</li><li>Изучение новых языков</li><li>Работа по дереву и ремесла</li>",
                 },
                 de: {
-                    // ...German translations, same structure with vol1_title: "... | ESN", vol5_title: "Pianist", etc...
+                    page_title: "Mikhail Lysyi | Persönliche Webseite", name: "Mikhail Lysyi", subtitle: "Englischlehrer | Reisender | Organisator",
+                    tab_home: "Start", tab_cv: "Lebenslauf", tab_about: "Über mich",
+                    home_title: "Kontaktinformationen", email_label: "Email:", social_label: "Soziale Medien:",
+                    cv_title: "Lebenslauf", download_cv: "📄 Lebenslauf herunterladen",
+                    education_title: "Bildung",
+                    edu1_title: "Bachelor in Betriebswirtschaft und Management", edu1_uni: '<a href="https://www.umb.sk/en/" target="_blank">Matej-Bel-Universität</a>', edu1_loc: "Banská Bystrica, Slowakei",
+                    edu1_desc: '<li>Wissenschaftliche Tätigkeit der Studierenden (2024) - Fallforschung zum Missbrauch von KI. (<a href="https://konferencie.ef.umb.sk/SVA_24/2_EMP/prispevok/2_Lysyi_Oleshko.pdf" target="_blank">Volltext der Arbeit</a>)</li><li>Internationaler Geschäftswettbewerb des Visegrád-Fonds (2025) - Teamleiter des Gewinnerteams. (<a href="https://fir.vse.cz/news/from-mystery-to-mastery-v4-students-competed-in-business-case-competition/" target="_blank">Mehr lesen</a>)</li>',
+                    edu2_title: "Bachelor of Business Administration in International Business", edu2_uni: '<a href="https://www.lapinamk.fi/en/" target="_blank">Fachhochschule Lappland</a>', edu2_loc: "Rovaniemi, Finnland",
+                    edu2_desc: "Nicht abgeschlossen aufgrund unzureichender Mittel.",
+                    add_courses_title: "Zusätzliche Kurse",
+                    add_courses_list: '<li><a href="https://uni-eszterhazy.hu/en" target="_blank">Universität Tokaj</a> (Sommeruniversität: Kulturwissenschaften)</li><li><a href="https://www.ulapland.fi/EN" target="_blank">Universität Lappland</a> (Betriebswirtschaft, Volkswirtschaft)</li><li><a href="https://arzamas.academy/" target="_blank">Arzamas Academy</a> (Sprachen, Geschichte, Sozialwissenschaften)</li><li>Harvard College (über <a href="https://www.edx.org/" target="_blank">edX.org</a>: Gerechtigkeit)</li><li>MIT (über <a href="https://ocw.mit.edu/" target="_blank">OpenCourseWare</a>: Makroökonomie; Kryptowährungen)</li>',
+                    work_title: "Berufserfahrung",
+                    work1_title: "Englischlehrer | Selbstständig",
+                    work1_desc: "<li>Entwicklung einer Methodik und Erstellung individueller Lernprogramme.</li><li>Erfolgreich 5 Schüler vom Anfänger- bis zum Konversationsniveau unterrichtet.</li><li>Vorbereitung auf SAT, IELTS, TOEFL.</li>",
+                    work2_title: "Safari- & Reiseleiter", work2_loc: "Rovaniemi, Finnland",
+                    work2_desc: '<li>Unternehmen: <a href="https://laplandwelcome.fi/" target="_blank">Lapland Welcome LTD</a>, <a href="https://www.wonderlapland.com/" target="_blank">Wander Lapland LTD</a>, Helios Tour LTD.</li><li>Arbeit in einem internationalen Team und Durchführung von Wintertourismusaktivitäten (Schneemobilfahrten, Eisfischen usw.).</li><li>Ausbildung von Junior-Guides.</li><li>Verkauf, Datenbankverwaltung und Partnerkommunikation.</li><li>Erhielt positives Feedback ohne Unfälle.</li>',
+                    work3_title: "Junior Technischer Spezialist | Uberfon", work3_loc: "Sankt Petersburg, Russland",
+                    work3_desc: "<li>Professionelle Reparaturen an Apple-Geräten im Team von Spezialisten.</li><li>Schnelles Erlernen neuer Apple-Produktfunktionen und Reparaturprozesse.</li><li>Berichterstattung, Kassenführung und Kommunikation mit Lieferanten.</li>",
+                    volunteer_title: "Freiwilligenarbeit",
+                    vol1_title: 'Erasmus-Studentenfreiwilliger, Organisator | ESN', vol1_loc: '<a href="https://www.esn.sk/" target="_blank">Matej-Bel-Universität, Banská Bystrica</a>',
+                    vol1_desc: "<li>Teilnahme an Budgetentscheidungen.</li><li>Veranstaltungsmanagement.</li><li>Überwachung des Wohlbefindens ankommender Studenten.</li>",
+                    vol2_title: 'Schwimmlehrer, Tutor | CERT / <a href="https://youth.europa.eu/solidarity_en" target="_blank">Europäisches Solidaritätskorps</a>', vol2_loc: "Craiova, Rumänien",
+                    vol2_desc: "Organisation von nicht-formalen Bildungskursen, Förderung eines gesunden Lebensstils und europäischer Werte, Schwimmunterricht für Kinder und Unterstützung kultureller Veranstaltungen.",
+                    vol3_title: "Tischler, Gärtner, Handwerker, Hirte", vol3_loc: "Georgien",
+                    vol3_desc: "Herstellung von Holzmöbeln in abgelegenen Dörfern und Betreuung von Erwachsenen mit Behinderungen.",
+                    vol4_title: 'Fotograf | <a href="https://www.lapinamk.fi/en/Cooperation/RDI-Projects/InnoBarentsLab" target="_blank">InnoBarentsLab</a>', vol4_loc: "Rovaniemi, Finnland",
+                    vol4_desc: "Erstellung von Medienmaterialien für Seminare: Arctic Design Week, Northern Stars Seminar.",
+                    vol5_title: "Pianist | Kulturzentrum Erciyes", vol5_loc: '<a href="https://www.erciyes.edu.tr/tr/etkinlik-detay/bir-gun-degil-her-gun-3-aralik/7214" target="_blank">Kayseri, Türkei</a>',
+                    vol5_desc: 'Klavieraufführung am Internationalen Tag der Menschen mit Behinderungen: “Bir Gün Değil, Her Gün 3 Aralık”.',
+                    skills_lang_title: "Fähigkeiten & Sprachen", skills_subtitle: "Fähigkeiten", lang_subtitle: "Sprachen",
+                    lang_header_lang: "Sprache", lang_header_level: "Niveau", lang_ru: "Russisch", level_native: "Muttersprache",
+                    about_title: "Über mich",
+                    about_text: "Ein vielseitiger und anpassungsfähiger Fachmann mit einem reichen Hintergrund in Bildung, Tourismus und technischen Dienstleistungen in mehreren Ländern. Begeistert vom lebenslangen Lernen, kulturellem Austausch und gesellschaftlichem Engagement, was sich in umfangreicher Freiwilligenarbeit zeigt – vom Unterrichten und der Organisation von Veranstaltungen bis hin zu praktischen Tätigkeiten wie Tischlerei und Fotografie. Nachgewiesene Fähigkeit, selbstständig und in internationalen Teams zu arbeiten, wobei stets ein kommunikativer, pünktlicher und höflicher Ansatz für jede Herausforderung gezeigt wird.",
+                    interests_title: "Hobbys und Interessen",
+                    interests_list: "<li>Reisen und Erkunden verschiedener Kulturen</li><li>Klavier spielen</li><li>Fotografie</li><li>Neue Sprachen lernen</li><li>Holzarbeiten und Handwerk</li>",
                 }
             };
-
-            // Custom logic for special timeline fields with links
-            function setSpecialFields(lang) {
-                // vol1_title
-                const vol1 = document.querySelector('[data-lang-key="vol1_title"]');
-                if (vol1) {
-                    let title = translations[lang].vol1_title;
-                    // Insert ESN link at the end (replace ESN with a link)
-                    vol1.innerHTML = title.replace(/ESN/, `<a href="https://www.esn.sk/" target="_blank">ESN</a>`);
-                }
-                // vol5_title
-                const vol5 = document.querySelector('[data-lang-key="vol5_title"]');
-                if (vol5) {
-                    // Make Pianist a link for all languages
-                    vol5.innerHTML = `<a href="https://www.erciyes.edu.tr/tr/etkinlik-detay/bir-gun-degil-her-gun-3-aralik/7214" target="_blank">${translations[lang].vol5_title}</a>`;
-                }
-            }
-
             const langSwitcher = document.querySelector('.language-switcher');
             const changeLanguage = (lang) => {
                 document.querySelectorAll('[data-lang-key]').forEach(element => {
                     const key = element.dataset.langKey;
-                    // Skip special fields, done below
-                    if (key === "vol1_title" || key === "vol5_title") return;
                     if (translations[lang][key]) {
                         element.innerHTML = translations[lang][key];
                     }
                 });
-                setSpecialFields(lang);
                 document.documentElement.lang = lang;
             };
             langSwitcher.addEventListener('click', (e) => {
