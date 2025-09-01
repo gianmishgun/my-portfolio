@@ -1,662 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title id="page-title">Mikhail Lysyi | Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body class="light">
-  <header>
-    [cite_start]<h1 id="name">Mikhail Lysyi [cite: 2]</h1>
-    <p id="subtitle" class="subtitle">English Teacher | Traveler | Organizer</p>
-
-    <div class="controls">
-      <div class="language-switcher">
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('ru')">Русский</button>
-        <button onclick="changeLanguage('de')">Deutsch</button>
-      </div>
-      <button onclick="toggleTheme()">🌙 / ☀️</button>
-    </div>
-
-    <nav>
-      <ul class="tabs">
-        <li class="tab-link current" data-tab="home">Home</li>
-        <li class="tab-link" data-tab="cv">CV</li>
-        <li class="tab-link" data-tab="publications">Publications</li>
-        <li class="tab-link" data-tab="about">About Me</li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="tab-content current">
-      <h2 id="home-title">Home</h2>
-      <div class="contact-info">
-        [cite_start]<p id="home-email">Email: <a href="mailto:mikhail.lysyi@gmail.com" id="email-link">mikhail.lysyi@gmail.com</a> [cite: 3]</p>
-        <p id="home-social">Social Media:</p>
-        <ul class="social-links">
-          <li><a href="#" target="_blank" id="github-link">GitHub</a></li>
-          <li><a href="#" target="_blank" id="instagram-link">Instagram</a></li>
-          <li><a href="#" target="_blank" id="linkedin-link">LinkedIn</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="cv" class="tab-content">
-      <h2 id="cv-title">CV</h2>
-      <div class="cv-section">
-        <p id="cv-download">📄 <a href="cv.pdf" download id="download-cv-link">Download CV</a></p>
-        <div class="timeline-container">
-          <div id="education-timeline" class="timeline">
-            [cite_start]<h3 id="education-title">Education [cite: 1]</h3>
-            <div class="timeline-item" data-year="2023">
-              <div class="timeline-content">
-                [cite_start]<h4 id="education-item-1-title">Bachelor of Business Economics and Management [cite: 5]</h4>
-                [cite_start]<p><strong><a href="#" id="education-item-1-university">Matej Bel University</a></strong> [cite: 6][cite_start], <span id="education-item-1-location">Banská Bystrica, Slovakia [cite: 8]</span></p>
-                [cite_start]<p id="education-item-1-dates">September 2023 – June 2026 [cite: 7]</p>
-                [cite_start]<p id="education-item-1-details">Student Scientific Activity - 2024 Case research of Misuse of Al International business competition by Visegrad Fund - 2025 - team-leader of the winning team [cite: 9]</p>
-              </div>
-            </div>
-            <div class="timeline-item" data-year="2016">
-              <div class="timeline-content">
-                [cite_start]<h4 id="education-item-2-title">Bachelor of Business Administration in International Business [cite: 10]</h4>
-                [cite_start]<p><strong><a href="#" id="education-item-2-university">Lapland University of Applied Sciences</a></strong> [cite: 10][cite_start], <span id="education-item-2-location">Rovaniemi, Finland [cite: 12]</span></p>
-                [cite_start]<p id="education-item-2-dates">September 2016 – December 2020 [cite: 11]</p>
-                [cite_start]<p id="education-item-2-details">unfinished due to insufficient funds [cite: 13]</p>
-              </div>
-            </div>
-          </div>
-          <div id="work-timeline" class="timeline">
-            [cite_start]<h3 id="work-title">Work Experience [cite: 19]</h3>
-            <div class="timeline-item" data-year="2018">
-              <div class="timeline-content">
-                <h4 id="work-item-1-title">English Language Teacher | [cite_start]Self Employed [cite: 20]</h4>
-                [cite_start]<p id="work-item-1-dates">September 2018 – present [cite: 21]</p>
-                [cite_start]<p id="work-item-1-detail-1">Finding a methodology and creating an individual study program [cite: 22]</p>
-                [cite_start]<p id="work-item-1-detail-2">Successfully taught 5 students from elementary to intermediate/conversational level [cite: 23]</p>
-                [cite_start]<p id="work-item-1-detail-3">Preparation for SAT, IELTS, TOEFL [cite: 24]</p>
-              </div>
-            </div>
-            <div class="timeline-item" data-year="2016">
-              <div class="timeline-content">
-                <h4 id="work-item-2-title">Safari Guide | [cite_start]<a href="#">Lapland Welcome LTD</a> [cite: 25]</h4>
-                [cite_start]<p id="work-item-2-dates">September 2016 – April 2018 [cite: 28]</p>
-                [cite_start]<p id="work-item-2-detail-1">Working in an international team and conducting common winter tourist activities such as snowmobile rides, ice fishing, countryside skiing, vehicle transfer, and others. [cite: 31, 32, 33]</p>
-                [cite_start]<p id="work-item-2-detail-2">Training of junior guides to work as safari guides. [cite: 34]</p>
-                [cite_start]<p id="work-item-2-detail-3">Sales tours, updating the database, communication with partners (hotels, restaurants, etc) [cite: 35]</p>
-                [cite_start]<p id="work-item-2-detail-4">Positive feedback and zero accidents. [cite: 36]</p>
-              </div>
-            </div>
-            <div class="timeline-item" data-year="2017">
-              <div class="timeline-content">
-                <h4 id="work-item-3-title">Junior Technical Specialist | [cite_start]<a href="#">Uberfon</a> [cite: 37]</h4>
-                [cite_start]<p id="work-item-3-dates">June 2017 – September 2017 [cite: 38]</p>
-                [cite_start]<p id="work-item-3-detail-1">Performing professional repairs on Apple devices in a short time with a team of specialists. [cite: 40]</p>
-                [cite_start]<p id="work-item-3-detail-2">Quick learning of new Apple product features and reparation processes (watch, iPhone, iPod). [cite: 41]</p>
-                [cite_start]<p id="work-item-3-detail-3">Reporting, dealing with the cash register, and communicating with suppliers and partners. [cite: 42]</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h3 id="skills-title">Skills & Languages</h3>
-        <div class="skills-container">
-          <div class="skills-list">
-            [cite_start]<h4 id="skills-subtitle">Skills [cite: 68]</h4>
-            <ul>
-              [cite_start]<li id="skill-item-1">Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook [cite: 69, 70]</li>
-              [cite_start]<li id="skill-item-2">MS Windows, Linux, Apple [cite: 71]</li>
-              [cite_start]<li id="skill-item-3">Driver Licence, category B [cite: 72]</li>
-              [cite_start]<li id="skill-item-4">Coordinating and managing events [cite: 73]</li>
-              [cite_start]<li id="skill-item-5">Work independently: individually and in teams [cite: 74]</li>
-              [cite_start]<li id="skill-item-6">Adaptable, communicative, punctual, polite [cite: 76]</li>
-            </ul>
-          </div>
-          <div class="languages-table">
-            <h4 id="languages-subtitle">Languages</h4>
-            <table>
-              <tr>
-                <th id="language-header">Language</th>
-                <th id="level-header">Level</th>
-              </tr>
-              <tr>
-                <td id="language-1">Russian</td>
-                [cite_start]<td id="language-1-level">Native [cite: 77]</td>
-              </tr>
-              <tr>
-                <td id="language-2">English</td>
-                [cite_start]<td id="language-2-level">C1 [cite: 77]</td>
-              </tr>
-              <tr>
-                <td id="language-3">Slovak</td>
-                [cite_start]<td id="language-3-level">B1 [cite: 77]</td>
-              </tr>
-              <tr>
-                <td id="language-4">German</td>
-                [cite_start]<td id="language-4-level">A2 [cite: 77]</td>
-              </tr>
-              <tr>
-                <td id="language-5">French</td>
-                [cite_start]<td id="language-5-level">A2 [cite: 77]</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <h3 id="gallery-title">Gallery</h3>
-        <div class="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/certificate1.jpg" alt="Certificate 1" id="gallery-item-1-img">
-              <p id="gallery-item-1-caption">International Business Competition Certificate</p>
-            </div>
-            <div class="carousel-item">
-              <img src="images/certificate2.jpg" alt="Certificate 2" id="gallery-item-2-img">
-              <p id="gallery-item-2-caption">Volunteer Work Certificate</p>
-            </div>
-            <div class="carousel-item">
-              <img src="images/certificate3.jpg" alt="Certificate 3" id="gallery-item-3-img">
-              <p id="gallery-item-3-caption">Education Certificate</p>
-            </div>
-          </div>
-          <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-          <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="tab-content">
-      <h2 id="publications-title">Publications and Achievements</h2>
-      <p id="publications-description">Here you can find my academic publications, achievements, and reference letters.</p>
-      <div class="publications-container">
-        <div class="publication-item">
-          [cite_start]<h3 id="publication-item-1-title">Case Research on Misuse of AI [cite: 9]</h3>
-          [cite_start]<p id="publication-item-1-date">Published in 2024 [cite: 9]</p>
-          <p id="publication-item-1-description">A detailed case study on the misuse of artificial intelligence in business.</p>
-          <a href="publications/case-research-ai.pdf" download id="publication-item-1-link">Download PDF</a>
-        </div>
-        <div class="publication-item">
-          [cite_start]<h3 id="publication-item-2-title">International Business Competition [cite: 9]</h3>
-          [cite_start]<p id="publication-item-2-date"><a href="#">Visegrad Fund</a>, 2025 [cite: 9]</p>
-          [cite_start]<p id="publication-item-2-description">Won the international business competition as a team leader. [cite: 9]</p>
-          <a href="publications/business-competition.pdf" download id="publication-item-2-link">Download PDF</a>
-        </div>
-        <div class="publication-item">
-          [cite_start]<h3 id="publication-item-3-title">Volunteer Work in Romania [cite: 51]</h3>
-          [cite_start]<p id="publication-item-3-date">2022-2023 [cite: 50]</p>
-          [cite_start]<p id="publication-item-3-description">Report on non-formal education classes and cultural events organized. [cite: 52]</p>
-          <a href="publications/volunteer-report.pdf" download id="publication-item-3-link">Download PDF</a>
-        </div>
-        <div class="publication-item">
-          <h3 id="reference-letters-title">Reference Letters</h3>
-          <p id="reference-letters-date">Various dates</p>
-          <p id="reference-letters-description">Collection of reference letters from employers and academic supervisors.</p>
-          <a href="publications/reference-letters.pdf" download id="reference-letters-link">Download PDF</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="tab-content">
-      <h2 id="about-me-title">About Me</h2>
-      <div class="about-content">
-        <p id="about-me-text">Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.</p>
-        <h3 id="hobbies-title">Hobbies and Interests</h3>
-        <ul id="hobbies-list">
-          <li id="hobby-item-1">Traveling</li>
-          [cite_start]<li id="hobby-item-2">Playing Piano [cite: 57]</li>
-          <li id="hobby-item-3">Learning new languages</li>
-          [cite_start]<li id="hobby-item-4">Photography [cite: 64]</li>
-          <li id="hobby-item-5">Reading books</li>
-        </ul>
-        <h3 id="interests-title">Professional Interests</h3>
-        <ul id="interests-list">
-          <li id="interest-item-1">Education and Teaching</li>
-          <li id="interest-item-2">Tourism and Travel</li>
-          <li id="interest-item-3">International Projects</li>
-          <li id="interest-item-4">Business Administration</li>
-          <li id="interest-item-5">Cultural Studies</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p id="footer-text">© 2025 Mikhail Lysyi</p>
-  </footer>
-
-  <script>
-    // Переключение вкладок
-    document.querySelectorAll('.tab-link').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const tabId = tab.getAttribute('data-tab');
-
-        document.querySelectorAll('.tab-link').forEach(link => {
-          link.classList.remove('current');
-        });
-        document.querySelectorAll('.tab-content').forEach(content => {
-          content.classList.remove('current');
-        });
-
-        tab.classList.add('current');
-        document.getElementById(tabId).classList.add('current');
-      });
-    });
-
-    // Переключение темы
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-      document.body.classList.toggle("light");
-    }
-
-    // Карусель
-    let slideIndex = 0;
-    showSlides();
-
-    function prevSlide() {
-      slideIndex--;
-      showSlides();
-    }
-
-    function nextSlide() {
-      slideIndex++;
-      showSlides();
-    }
-
-    function showSlides() {
-      const slides = document.querySelectorAll('.carousel-item');
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
-      }
-      if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-      }
-      slides.forEach(slide => {
-        slide.style.display = 'none';
-      });
-      slides[slideIndex].style.display = 'block';
-    }
-
-
-    // Переключение языка
-    const translations = {
-      en: {
-        // Общие элементы
-        "page-title": "Mikhail Lysyi | Personal Website",
-        "name": "Mikhail Lysyi",
-        "subtitle": "English Teacher | Traveler | Organizer",
-        "footer-text": "© 2025 Mikhail Lysyi",
-        "gallery-title": "Gallery",
-
-        // Вкладка Home
-        "home-title": "Home",
-        "home-email": "Email: ",
-        "home-social": "Social Media:",
-        "email-link": "mikhail.lysyi@gmail.com",
-        "github-link": "GitHub",
-        "instagram-link": "Instagram",
-        "linkedin-link": "LinkedIn",
-
-        // Вкладка CV
-        "cv-title": "CV",
-        "cv-download": "📄 ",
-        "download-cv-link": "Download CV",
-        "education-title": "Education",
-        "work-title": "Work Experience",
-        "skills-title": "Skills & Languages",
-        "skills-subtitle": "Skills",
-        "languages-subtitle": "Languages",
-        "language-header": "Language",
-        "level-header": "Level",
-
-        // Элементы образования
-        "education-item-1-title": "Bachelor of Business Economics and Management",
-        "education-item-1-university": "Matej Bel University",
-        "education-item-1-location": "Banská Bystrica, Slovakia",
-        "education-item-1-dates": "September 2023 – June 2026",
-        "education-item-1-details": "Student Scientific Activity – 2024 – Case research of Misuse of AI International business competition by Visegrad Fund – 2025 – team leader of the winning team",
-        "education-item-2-title": "Bachelor of Business Administration in International Business",
-        "education-item-2-university": "Lapland University of Applied Sciences",
-        "education-item-2-location": "Rovaniemi, Finland",
-        "education-item-2-dates": "September 2016 – December 2020",
-        "education-item-2-details": "Unfinished due to insufficient funds",
-
-        // Элементы работы
-        "work-item-1-title": "English Language Teacher | Self Employed",
-        "work-item-1-dates": "September 2018 – present",
-        "work-item-1-detail-1": "Finding a methodology and creating an individual study program",
-        "work-item-1-detail-2": "Successfully taught 5 students from elementary to intermediate/conversational level",
-        "work-item-1-detail-3": "Preparation for SAT, IELTS, TOEFL",
-        "work-item-2-title": "Safari Guide | <a href='#'>Lapland Welcome LTD</a>",
-        "work-item-2-dates": "September 2016 – April 2018",
-        "work-item-2-detail-1": "Working in an international team and conducting common winter tourist activities such as snowmobile rides, ice fishing, countryside skiing, vehicle transfer, and others.",
-        "work-item-2-detail-2": "Training of junior guides to work as safari guides.",
-        "work-item-2-detail-3": "Sales tours, updating the database, communication with partners (hotels, restaurants, etc)",
-        "work-item-2-detail-4": "Positive feedback and zero accidents.",
-        "work-item-3-title": "Junior Technical Specialist | <a href='#'>Uberfon</a>",
-        "work-item-3-dates": "June 2017 – September 2017",
-        "work-item-3-detail-1": "Performing professional repairs on Apple devices in a short time with a team of specialists.",
-        "work-item-3-detail-2": "Quick learning of new Apple product features and reparation processes (watch, iPhone, iPod).",
-        "work-item-3-detail-3": "Reporting, dealing with the cash register, and communicating with suppliers and partners.",
-
-        // Навыки
-        "skill-item-1": "Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook",
-        "skill-item-2": "MS Windows, Linux, Apple",
-        "skill-item-3": "Driver Licence, category B",
-        "skill-item-4": "Coordinating and managing events",
-        "skill-item-5": "Work independently: individually and in teams",
-        "skill-item-6": "Adaptable, communicative, punctual, polite",
-
-        // Языки
-        "language-1": "Russian",
-        "language-1-level": "Native",
-        "language-2": "English",
-        "language-2-level": "C1",
-        "language-3": "Slovak",
-        "language-3-level": "B1",
-        "language-4": "German",
-        "language-4-level": "A2",
-        "language-5": "French",
-        "language-5-level": "A2",
-
-        // Галерея
-        "gallery-item-1-caption": "International Business Competition Certificate",
-        "gallery-item-2-caption": "Volunteer Work Certificate",
-        "gallery-item-3-caption": "Education Certificate",
-
-        // Вкладка Publications
-        "publications-title": "Publications and Achievements",
-        "publications-description": "Here you can find my academic publications, achievements, and reference letters.",
-        "publication-item-1-title": "Case Research on Misuse of AI",
-        "publication-item-1-date": "Published in 2024",
-        "publication-item-1-description": "A detailed case study on the misuse of artificial intelligence in business.",
-        "publication-item-1-link": "Download PDF",
-        "publication-item-2-title": "International Business Competition",
-        "publication-item-2-date": "<a href='#'>Visegrad Fund</a>, 2025",
-        "publication-item-2-description": "Won the international business competition as a team leader.",
-        "publication-item-2-link": "Download PDF",
-        "publication-item-3-title": "Volunteer Work in Romania",
-        "publication-item-3-date": "2022-2023",
-        "publication-item-3-description": "Report on non-formal education classes and cultural events organized.",
-        "publication-item-3-link": "Download PDF",
-        "reference-letters-title": "Reference Letters",
-        "reference-letters-date": "Various dates",
-        "reference-letters-description": "Collection of reference letters from employers and academic supervisors.",
-        "reference-letters-link": "Download PDF",
-
-        // Вкладка About Me
-        "about-me-title": "About Me",
-        "about-me-text": "Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.",
-        "hobbies-title": "Hobbies and Interests",
-        "hobby-item-1": "Traveling",
-        "hobby-item-2": "Playing Piano",
-        "hobby-item-3": "Learning new languages",
-        "hobby-item-4": "Photography",
-        "hobby-item-5": "Reading books",
-        "interests-title": "Professional Interests",
-        "interest-item-1": "Education and Teaching",
-        "interest-item-2": "Tourism and Travel",
-        "interest-item-3": "International Projects",
-        "interest-item-4": "Business Administration",
-        "interest-item-5": "Cultural Studies"
-      },
-      ru: {
-        // Общие элементы
-        "page-title": "Михаил Лысый | Личный сайт",
-        "name": "Михаил Лысый",
-        "subtitle": "Преподаватель английского | Путешественник | Организатор",
-        "footer-text": "© 2025 Михаил Лысый",
-        "gallery-title": "Галерея",
-
-        // Вкладка Home
-        "home-title": "Главная",
-        "home-email": "Email: ",
-        "home-social": "Социальные сети:",
-        "email-link": "mikhail.lysyi@gmail.com",
-        "github-link": "GitHub",
-        "instagram-link": "Instagram",
-        "linkedin-link": "LinkedIn",
-
-        // Вкладка CV
-        "cv-title": "Резюме",
-        "cv-download": "📄 ",
-        "download-cv-link": "Скачать резюме",
-        "education-title": "Образование",
-        "work-title": "Опыт работы",
-        "skills-title": "Навыки и языки",
-        "skills-subtitle": "Навыки",
-        "languages-subtitle": "Языки",
-        "language-header": "Язык",
-        "level-header": "Уровень",
-
-        // Элементы образования
-        "education-item-1-title": "Бакалавр экономики и менеджмента бизнеса",
-        "education-item-1-university": "Университет Матея Бела",
-        "education-item-1-location": "Банска-Бистрица, Словакия",
-        "education-item-1-dates": "Сентябрь 2023 – Июнь 2026",
-        "education-item-1-details": "Научная деятельность студентов – 2024 – Исследование случаев неправильного использования ИИ. Международный бизнес-конкурс Фонда Вышеград – 2025 – лидер победной команды",
-        "education-item-2-title": "Бакалавр делового администрирования в международном бизнесе",
-        "education-item-2-university": "Прикладной университет Лапландии",
-        "education-item-2-location": "Рованиеми, Финляндия",
-        "education-item-2-dates": "Сентябрь 2016 – Декабрь 2020",
-        "education-item-2-details": "Не окончено из-за недостатка средств",
-
-        // Элементы работы
-        "work-item-1-title": "Преподаватель английского языка | Частная практика",
-        "work-item-1-dates": "Сентябрь 2018 – настоящее время",
-        "work-item-1-detail-1": "Разработка методики и создание индивидуальной программы обучения",
-        "work-item-1-detail-2": "Успешно обучил 5 студентов от начального до среднего/разговорного уровня",
-        "work-item-1-detail-3": "Подготовка к SAT, IELTS, TOEFL",
-        "work-item-2-title": "Гид по сафари | <a href='#'>Lapland Welcome LTD</a>",
-        "work-item-2-dates": "Сентябрь 2016 – Апрель 2018",
-        "work-item-2-detail-1": "Работа в международной команде и проведение обычных зимних туристических мероприятий, таких как катание на снегоходах, рыбалка на льду, лыжные прогулки по сельской местности, трансфер автомобилей и другие.",
-        "work-item-2-detail-2": "Обучение новых гидов для работы в качестве гидов по сафари.",
-        "work-item-2-detail-3": "Продажа туров, обновление базы данных, общение с партнерами (отели, рестораны и т.д.)",
-        "work-item-2-detail-4": "Положительные отзывы и отсутствие инцидентов.",
-        "work-item-3-title": "Младший технический специалист | <a href='#'>Uberfon</a>",
-        "work-item-3-dates": "Июнь 2017 – Сентябрь 2017",
-        "work-item-3-detail-1": "Профессиональный ремонт устройств Apple в короткие сроки в команде специалистов.",
-        "work-item-3-detail-2": "Быстрое изучение новых функций продуктов Apple и процессов ремонта (часы, iPhone, iPod).",
-        "work-item-3-detail-3": "Отчетность, работа с кассовым аппаратом и общение с поставщиками и партнерами.",
-
-        // Навыки
-        "skill-item-1": "Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook",
-        "skill-item-2": "MS Windows, Linux, Apple",
-        "skill-item-3": "Водительские права, категория B",
-        "skill-item-4": "Организация и управление мероприятиями",
-        "skill-item-5": "Работа независимо: индивидуально и в команде",
-        "skill-item-6": "Адаптивный, коммуникабельный, пунктуальный, вежливый",
-
-        // Языки
-        "language-1": "Русский",
-        "language-1-level": "Родной",
-        "language-2": "Английский",
-        "language-2-level": "C1",
-        "language-3": "Словацкий",
-        "language-3-level": "B1",
-        "language-4": "Немецкий",
-        "language-4-level": "A2",
-        "language-5": "Французский",
-        "language-5-level": "A2",
-
-        // Галерея
-        "gallery-item-1-caption": "Сертификат международного бизнес-конкурса",
-        "gallery-item-2-caption": "Сертификат волонтерской работы",
-        "gallery-item-3-caption": "Образовательный сертификат",
-
-        // Вкладка Publications
-        "publications-title": "Публикации и достижения",
-        "publications-description": "Здесь вы можете найти мои академические публикации, достижения и рекомендательные письма.",
-        "publication-item-1-title": "Исследование случаев неправильного использования ИИ",
-        "publication-item-1-date": "Опубликовано в 2024",
-        "publication-item-1-description": "Подробное исследование случаев неправильного использования искусственного интеллекта в бизнесе.",
-        "publication-item-1-link": "Скачать PDF",
-        "publication-item-2-title": "Международный бизнес-конкурс",
-        "publication-item-2-date": "<a href='#'>Фонд Вышеград</a>, 2025",
-        "publication-item-2-description": "Победа в международном бизнес-конкурсе в качестве лидера команды.",
-        "publication-item-2-link": "Скачать PDF",
-        "publication-item-3-title": "Волонтерская работа в Румынии",
-        "publication-item-3-date": "2022-2023",
-        "publication-item-3-description": "Отчет о неформальных образовательных классах и организованных культурных мероприятиях.",
-        "publication-item-3-link": "Скачать PDF",
-        "reference-letters-title": "Рекомендательные письма",
-        "reference-letters-date": "Разные даты",
-        "reference-letters-description": "Коллекция рекомендательных писем от работодателей и академических руководителей.",
-        "reference-letters-link": "Скачать PDF",
-
-        // Вкладка About Me
-        "about-me-title": "Обо мне",
-        "about-me-text": "Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.",
-        "hobbies-title": "Хобби и интересы",
-        "hobby-item-1": "Путешествия",
-        "hobby-item-2": "Игра на пианино",
-        "hobby-item-3": "Изучение новых языков",
-        "hobby-item-4": "Фотография",
-        "hobby-item-5": "Чтение книг",
-        "interests-title": "Профессиональные интересы",
-        "interest-item-1": "Образование и преподавание",
-        "interest-item-2": "Туризм и путешествия",
-        "interest-item-3": "Международные проекты",
-        "interest-item-4": "Деловое администрирование",
-        "interest-item-5": "Культурные исследования"
-      },
-      de: {
-        // Общие элементы
-        "page-title": "Mikhail Lysyi | Persönliche Website",
-        "name": "Mikhail Lysyi",
-        "subtitle": "Englischlehrer | Reisender | Organisator",
-        "footer-text": "© 2025 Mikhail Lysyi",
-        "gallery-title": "Galerie",
-
-        // Вкладка Home
-        "home-title": "Startseite",
-        "home-email": "Email: ",
-        "home-social": "Soziale Medien:",
-        "email-link": "mikhail.lysyi@gmail.com",
-        "github-link": "GitHub",
-        "instagram-link": "Instagram",
-        "linkedin-link": "LinkedIn",
-
-        // Вкладка CV
-        "cv-title": "Lebenslauf",
-        "cv-download": "📄 ",
-        "download-cv-link": "Lebenslauf herunterladen",
-        "education-title": "Bildung",
-        "work-title": "Berufserfahrung",
-        "skills-title": "Fähigkeiten & Sprachen",
-        "skills-subtitle": "Fähigkeiten",
-        "languages-subtitle": "Sprachen",
-        "language-header": "Sprache",
-        "level-header": "Niveau",
-
-        // Элементы образования
-        "education-item-1-title": "Bachelor of Business Economics and Management",
-        "education-item-1-university": "Matej Bel Universität",
-        "education-item-1-location": "Banská Bystrica, Slowakei",
-        "education-item-1-dates": "September 2023 – Juni 2026",
-        "education-item-1-details": "Studentische Wissenschaftliche Tätigkeit – 2024 – Fallstudie zur Fehlverwendung von KI. Internationaler Business-Wettbewerb des Visegrad-Fonds – 2025 – Teamleiter des Gewinnteams",
-        "education-item-2-title": "Bachelor in International Business Administration",
-        "education-item-2-university": "Lapland University of Applied Sciences",
-        "education-item-2-location": "Rovaniemi, Finnland",
-        "education-item-2-dates": "September 2016 – Dezember 2020",
-        "education-item-2-details": "Nicht abgeschlossen aufgrund unzureichender Mittel",
-
-        // Элементы работы
-        "work-item-1-title": "Englischlehrer | Selbstständig",
-        "work-item-1-dates": "September 2018 – heute",
-        "work-item-1-detail-1": "Entwicklung einer Methodik und Erstellung eines individuellen Studienprogramms",
-        "work-item-1-detail-2": "Erfolgreich 5 Schüler von Grundkenntnissen bis zum mittleren/konversationsfähigen Niveau unterrichtet",
-        "work-item-1-detail-3": "Vorbereitung auf SAT, IELTS, TOEFL",
-        "work-item-2-title": "Safari-Guide | <a href='#'>Lapland Welcome LTD</a>",
-        "work-item-2-dates": "September 2016 – April 2018",
-        "work-item-2-detail-1": "Arbeit in einem internationalen Team und Durchführung von üblichen Wintertouristenaktivitäten wie Schneemobilfahrten, Eisfischen, Landskilaufen, Fahrzeugtransfer und andere.",
-        "work-item-2-detail-2": "Schulung von Junior-Guides zur Arbeit als Safari-Guides.",
-        "work-item-2-detail-3": "Verkauf von Touren, Aktualisierung der Datenbank, Kommunikation mit Partnern (Hotels, Restaurants usw.)",
-        "work-item-2-detail-4": "Positives Feedback und null Unfälle.",
-        "work-item-3-title": "Junior Technischer Spezialist | <a href='#'>Uberfon</a>",
-        "work-item-3-dates": "Juni 2017 – September 2017",
-        "work-item-3-detail-1": "Durchführung professioneller Reparaturen an Apple-Geräten in kurzer Zeit mit einem Team von Spezialisten.",
-        "work-item-3-detail-2": "Schnelles Erlernen neuer Apple-Produktfunktionen und Reparaturprozesse (Uhr, iPhone, iPod).",
-        "work-item-3-detail-3": "Berichterstattung, Umgang mit der Kasse und Kommunikation mit Lieferanten und Partnern.",
-
-        // Навыки
-        "skill-item-1": "Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook",
-        "skill-item-2": "MS Windows, Linux, Apple",
-        "skill-item-3": "Führerschein, Kategorie B",
-        "skill-item-4": "Koordination und Organisation von Veranstaltungen",
-        "skill-item-5": "Selbstständiges Arbeiten: individuell und im Team",
-        "skill-item-6": "Anpassungsfähig, kommunikativ, pünktlich, höflich",
-
-        // Языки
-        "language-1": "Russisch",
-        "language-1-level": "Muttersprache",
-        "language-2": "Englisch",
-        "language-2-level": "C1",
-        "language-3": "Slowakisch",
-        "language-3-level": "B1",
-        "language-4": "Deutsch",
-        "language-4-level": "A2",
-        "language-5": "Französisch",
-        "language-5-level": "A2",
-
-        // Галерея
-        "gallery-item-1-caption": "Zertifikat des internationalen Business-Wettbewerbs",
-        "gallery-item-2-caption": "Zertifikat für Freiwilligenarbeit",
-        "gallery-item-3-caption": "Bildungszertifikat",
-
-        // Вкладка Publications
-        "publications-title": "Veröffentlichungen und Erfolge",
-        "publications-description": "Hier finden Sie meine akademischen Veröffentlichungen, Erfolge und Referenzschreiben.",
-        "publication-item-1-title": "Fallstudie zur Fehlverwendung von KI",
-        "publication-item-1-date": "Veröffentlicht 2024",
-        "publication-item-1-description": "Eine detaillierte Fallstudie zur Fehlverwendung von künstlicher Intelligenz im Business.",
-        "publication-item-1-link": "PDF herunterladen",
-        "publication-item-2-title": "Internationaler Business-Wettbewerb",
-        "publication-item-2-date": "<a href='#'>Visegrad Fund</a>, 2025",
-        "publication-item-2-description": "Gewann den internationalen Business-Wettbewerb als Teamleiter.",
-        "publication-item-2-link": "PDF herunterladen",
-        "publication-item-3-title": "Freiwilligenarbeit in Rumänien",
-        "publication-item-3-date": "2022-2023",
-        "publication-item-3-description": "Bericht über nicht-formale Bildungskurse und organisierte kulturelle Veranstaltungen.",
-        "publication-item-3-link": "PDF herunterladen",
-        "reference-letters-title": "Referenzschreiben",
-        "reference-letters-date": "Verschiedene Daten",
-        "reference-letters-description": "Sammlung von Referenzschreiben von Arbeitgebern und akademischen Betreuern.",
-        "reference-letters-link": "PDF herunterladen",
-
-        // Вкладка About Me
-        "about-me-title": "Über mich",
-        "about-me-text": "Hallo! Ich bin Mikhail, ein mehrsprachiger Fachmann mit Erfahrung in Bildung, Tourismus und internationalen Projekten.",
-        "hobbies-title": "Hobbys und Interessen",
-        "hobby-item-1": "Reisen",
-        "hobby-item-2": "Klavier spielen",
-        "hobby-item-3": "Neue Sprachen lernen",
-        "hobby-item-4": "Fotografie",
-        "hobby-item-5": "Bücher lesen",
-        "interests-title": "Berufliche Interessen",
-        "interest-item-1": "Bildung und Lehre",
-        "interest-item-2": "Tourismus und Reisen",
-        "interest-item-3": "Internationale Projekte",
-        "interest-item-4": "Betriebswirtschaft",
-        "interest-item-5": "Kulturwissenschaften"
-      }
-    };
-
-    function changeLanguage(lang) {
-      const langTranslations = translations[lang];
-      for (const id in langTranslations) {
-        const element = document.getElementById(id);
-        if (element) {
-          // Используем innerHTML для элементов, которые могут содержать теги <a>
-          if (id.includes('-title') || id.includes('-university') || id.includes('-date')) {
-            element.innerHTML = langTranslations[id];
-          } else {
-            element.innerText = langTranslations[id];
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="page_title">Mikhail Lysyi | Personal Website</title>
+    
+    <style>
+        /* CSS переменные для легкой смены темы */
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #fff;
+            --accent-color: #007bff;
+            --border-color: #ddd;
+            --timeline-line: #ccc;
+            --shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-      }
-    }
-  </script>
+
+        body.dark-theme {
+            --bg-color: #121212;
+            --text-color: #f1f1f1;
+            --header-bg: #1e1e1e;
+            --accent-color: #4dabf7;
+            --border-color: #444;
+            --timeline-line: #555;
+            --shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        /* Общие стили */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-title h1 { margin: 0; }
+        .header-title p { margin: 5px 0 0; opacity: 0.8; }
+        .controls { display: flex; align-items: center; gap: 15px; margin-top: 10px; }
+        .controls button { background: none; border: 1px solid var(--border-color); color: var(--text-color); padding: 5px 10px; cursor: pointer; border-radius: 5px; }
+        
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        nav li {
+            padding: 10px 5px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+        nav li.active {
+            border-bottom-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Основной контент и вкладки */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h2, h3, h4 { color: var(--text-color); }
+
+        /* Секция CV - Таймлайн */
+        .timeline {
+            border-left: 2px solid var(--timeline-line);
+            padding: 20px 0 20px 30px;
+            position: relative;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            background: var(--header-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .timeline-item::before {
+            content: attr(data-year);
+            position: absolute;
+            left: -85px;
+            top: 20px;
+            font-weight: bold;
+            background: var(--accent-color);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            border: 3px solid var(--accent-color);
+        }
+
+        /* Секция навыков */
+        .skills-languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .skills-list, .languages-table { flex: 1; min-width: 280px; }
+        .languages-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .languages-table th, .languages-table td {
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            text-align: left;
+        }
+        
+        /* Галерея/Карусель */
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .carousel-item { display: none; }
+        .carousel-item.active { display: block; text-align: center; }
+        .carousel-item img { max-width: 100%; border-radius: 8px; }
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body class="light-theme">
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1 data-lang-key="name">Mikhail Lysyi</h1>
+                    <p data-lang-key="subtitle">English Teacher | Traveler | Organizer</p>
+                </div>
+                <div class="controls">
+                    <div class="language-switcher">
+                        <button data-lang="en">EN</button>
+                        <button data-lang="ru">RU</button>
+                        <button data-lang="de">DE</button>
+                    </div>
+                    <button id="theme-toggle" data-lang-key="theme_toggle_btn">🌙 / ☀️</button>
+                </div>
+            </div>
+            <nav>
+                <ul id="tabs">
+                    <li class="tab-link active" data-tab="home" data-lang-key="tab_home">Home</li>
+                    <li class="tab-link" data-tab="cv" data-lang-key="tab_cv">CV</li>
+                    <li class="tab-link" data-tab="publications" data-lang-key="tab_publications">Publications</li>
+                    <li class="tab-link" data-tab="about" data-lang-key="tab_about">About Me</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="tab-content active">
+            <h2 data-lang-key="home_title">Contact Information</h2>
+            [cite_start]<p><b data-lang-key="email_label">Email:</b> <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p> [cite: 3]
+            <p><b data-lang-key="social_label">Social Media:</b></p>
+            <ul>
+                <li><a href="#" target="_blank">GitHub</a></li>
+                <li><a href="#" target="_blank">LinkedIn</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+
+        <section id="cv" class="tab-content">
+            <h2 data-lang-key="cv_title">Curriculum Vitae</h2>
+            <p><a href="cv.pdf" download data-lang-key="download_cv">📄 Download CV</a></p>
+
+            <h3 data-lang-key="education_title">Education</h3>
+            <div class="timeline">
+                <article class="timeline-item" data-year="2023-2026">
+                    [cite_start]<h4 data-lang-key="edu1_title">Bachelor of Business Economics and Management</h4> [cite: 5]
+                    [cite_start]<p><strong data-lang-key="edu1_uni"><a href="#">Matej Bel University</a></strong>, <span data-lang-key="edu1_loc">Banská Bystrica, Slovakia</span></p> [cite: 6, 8]
+                    <ul data-lang-key="edu1_desc">
+                        [cite_start]<li>Student Scientific Activity - 2024 Case research of Misuse of AI.</li> [cite: 9]
+                        [cite_start]<li>International business competition by Visegrad Fund - 2025 - team-leader of the winning team.</li> [cite: 9]
+                    </ul>
+                </article>
+                <article class="timeline-item" data-year="2016-2020">
+                    [cite_start]<h4 data-lang-key="edu2_title">Bachelor of Business Administration in International Business</h4> [cite: 10]
+                    [cite_start]<p><strong data-lang-key="edu2_uni"><a href="#">Lapland University of Applied Sciences</a></strong>, <span data-lang-key="edu2_loc">Rovaniemi, Finland</span></p> [cite: 10, 12]
+                    [cite_start]<p data-lang-key="edu2_desc">Unfinished due to insufficient funds.</p> [cite: 13]
+                </article>
+            </div>
+
+            <h3 data-lang-key="work_title">Work Experience</h3>
+            <div class="timeline">
+                <article class="timeline-item" data-year="2018-Present">
+                    <h4 data-lang-key="work1_title">English Language Teacher | [cite_start]Self Employed</h4> [cite: 20, 21]
+                    <ul data-lang-key="work1_desc">
+                        [cite_start]<li>Finding a methodology and creating an individual study program.</li> [cite: 22]
+                        [cite_start]<li>Successfully taught 5 students from elementary to intermediate/conversational level.</li> [cite: 22, 23]
+                        [cite_start]<li>Preparation for SAT, IELTS, TOEFL.</li> [cite: 24]
+                    </ul>
+                </article>
+                <article class="timeline-item" data-year="2016-2018">
+                    <h4 data-lang-key="work2_title">Safari Guide | [cite_start]<a href="#">Lapland Welcome LTD</a></h4> [cite: 25, 28]
+                    <ul data-lang-key="work2_desc">
+                        [cite_start]<li>Working in an international team and conducting common winter tourist activities.</li> [cite: 31]
+                        [cite_start]<li>Training of junior guides to work as safari guides.</li> [cite: 34]
+                        [cite_start]<li>Sales tours, updating the database, communication with partners.</li> [cite: 35]
+                    </ul>
+                </article>
+                 <article class="timeline-item" data-year="2017">
+                    <h4 data-lang-key="work3_title">Junior Technical Specialist | [cite_start]<a href="#">Uberfon</a></h4> [cite: 37, 38]
+                     [cite_start]<p data-lang-key="work3_loc">Saint Petersburg, Russia</p> [cite: 39]
+                    <ul data-lang-key="work3_desc">
+                        [cite_start]<li>Performing professional repairs on Apple devices.</li> [cite: 40]
+                        [cite_start]<li>Quick learning of new Apple product features and reparation processes.</li> [cite: 41]
+                        [cite_start]<li>Reporting, dealing with the cash register, and communicating with suppliers.</li> [cite: 42]
+                    </ul>
+                </article>
+            </div>
+
+            <h3 data-lang-key="volunteer_title">Volunteer Work</h3>
+            <div class="timeline">
+                <article class="timeline-item" data-year="2022-2023">
+                    <h4 data-lang-key="vol1_title">Swimming teacher, tutor | [cite_start]<a href="#">European Solidarity Corps</a></h4> [cite: 49, 50]
+                    [cite_start]<p data-lang-key="vol1_loc">Craiova, Romania</p> [cite: 51]
+                    [cite_start]<p data-lang-key="vol1_desc">Organizing non-formal education classes, promoting healthy lifestyle and European values, teaching swimming to kids.</p> [cite: 52, 53]
+                </article>
+                <article class="timeline-item" data-year="2022">
+                    <h4 data-lang-key="vol2_title">Carpenter, gardener, handyman</h4>
+                    [cite_start]<p data-lang-key="vol2_loc">Georgia</p> [cite: 55]
+                    [cite_start]<p data-lang-key="vol2_desc">Creating wooden furniture in remote villages and caring for adults with disabilities.</p> [cite: 56]
+                </article>
+            </div>
+
+
+            <h3 data-lang-key="skills_lang_title">Skills & Languages</h3>
+            <div class="skills-languages">
+                <div class="skills-list">
+                    <h4 data-lang-key="skills_subtitle">Skills</h4>
+                    <ul>
+                        [cite_start]<li>Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook</li> [cite: 69]
+                        [cite_start]<li>MS Windows, Linux, Apple</li> [cite: 71]
+                        [cite_start]<li>Driver Licence, category B</li> [cite: 72]
+                        [cite_start]<li>Coordinating and managing events</li> [cite: 73]
+                        [cite_start]<li>Work independently: individually and in teams</li> [cite: 74]
+                        [cite_start]<li>Adaptable, communicative, punctual, polite</li> [cite: 76]
+                    </ul>
+                </div>
+                <div class="languages-table">
+                    <h4 data-lang-key="lang_subtitle">Languages</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-lang-key="lang_header_lang">Language</th>
+                                <th data-lang-key="lang_header_level">Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            [cite_start]<tr><td data-lang-key="lang_ru">Russian</td><td data-lang-key="level_native">Native</td></tr> [cite: 77]
+                            [cite_start]<tr><td data-lang-key="lang_en">English</td><td>C1</td></tr> [cite: 77]
+                            [cite_start]<tr><td data-lang-key="lang_sk">Slovak</td><td>B1</td></tr> [cite: 77]
+                            [cite_start]<tr><td data-lang-key="lang_de">German</td><td>A2</td></tr> [cite: 77]
+                            [cite_start]<tr><td data-lang-key="lang_fr">French</td><td>A2</td></tr> [cite: 77]
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="tab-content">
+            <h2 data-lang-key="pubs_title">Publications & Achievements</h2>
+            <article>
+                <h3 data-lang-key="pub1_title">Case Research on Misuse of AI</h3>
+                <p><i data-lang-key="pub1_date">2024</i></p>
+                [cite_start]<p data-lang-key="pub1_desc">Part of the Student Scientific Activity at Matej Bel University.</p> [cite: 9]
+                <a href="#" download data-lang-key="download_pdf">Download PDF</a>
+            </article>
+            <hr>
+            <article>
+                <h3 data-lang-key="pub2_title">International Business Competition Winner</h3>
+                <p><i data-lang-key="pub2_date">2025</i></p>
+                [cite_start]<p data-lang-key="pub2_desc">Team-leader of the winning team in the competition organized by the <a href="#">Visegrad Fund</a>.</p> [cite: 9]
+                <a href="#" download data-lang-key="download_pdf">Download PDF</a>
+            </article>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2 data-lang-key="about_title">About Me</h2>
+            <p data-lang-key="about_text">Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, international projects, and volunteer work across Europe. I am passionate about cultural exchange, continuous learning, and creating positive experiences for others, whether in a classroom, on a tour, or during a community event.</p>
+            <h3 data-lang-key="interests_title">Hobbies and Interests</h3>
+            <ul data-lang-key="interests_list">
+                <li>Traveling and exploring different cultures</li>
+                [cite_start]<li>Playing the piano</li> [cite: 57]
+                [cite_start]<li>Photography</li> [cite: 64]
+                <li>Learning new languages</li>
+                [cite_start]<li>Woodworking and handicrafts</li> [cite: 54]
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК ---
+            const tabsContainer = document.getElementById('tabs');
+            const tabLinks = tabsContainer.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabsContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tab-link')) {
+                    const targetTab = e.target.dataset.tab;
+
+                    // Обновляем активную вкладку
+                    tabLinks.forEach(link => link.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    // Обновляем активный контент
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === targetTab) {
+                            content.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            // --- ЛОГИКА СМЕНЫ ТЕМЫ ---
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+            });
+
+            // --- ЛОГИКА СМЕНЫ ЯЗЫКА ---
+            const translations = {
+                en: {
+                    page_title: "Mikhail Lysyi | Personal Website",
+                    name: "Mikhail Lysyi",
+                    subtitle: "English Teacher | Traveler | Organizer",
+                    tab_home: "Home", tab_cv: "CV", tab_publications: "Publications", tab_about: "About Me",
+                    home_title: "Contact Information", email_label: "Email:", social_label: "Social Media:",
+                    cv_title: "Curriculum Vitae", download_cv: "📄 Download CV",
+                    education_title: "Education", work_title: "Work Experience", volunteer_title: "Volunteer Work",
+                    edu1_title: "Bachelor of Business Economics and Management", edu1_uni: "<a href='#'>Matej Bel University</a>", edu1_loc: "Banská Bystrica, Slovakia",
+                    edu1_desc: "<li>Student Scientific Activity - 2024 Case research of Misuse of AI.</li><li>International business competition by Visegrad Fund - 2025 - team-leader of the winning team.</li>",
+                    edu2_title: "Bachelor of Business Administration in International Business", edu2_uni: "<a href='#'>Lapland University of Applied Sciences</a>", edu2_loc: "Rovaniemi, Finland",
+                    edu2_desc: "Unfinished due to insufficient funds.",
+                    work1_title: "English Language Teacher | Self Employed",
+                    work1_desc: "<li>Finding a methodology and creating an individual study program.</li><li>Successfully taught 5 students from elementary to intermediate/conversational level.</li><li>Preparation for SAT, IELTS, TOEFL.</li>",
+                    work2_title: "Safari Guide | <a href='#'>Lapland Welcome LTD</a>",
+                    work2_desc: "<li>Working in an international team and conducting common winter tourist activities.</li><li>Training of junior guides to work as safari guides.</li><li>Sales tours, updating the database, communication with partners.</li>",
+                    work3_title: "Junior Technical Specialist | <a href='#'>Uberfon</a>", work3_loc: "Saint Petersburg, Russia",
+                    work3_desc: "<li>Performing professional repairs on Apple devices.</li><li>Quick learning of new Apple product features and reparation processes.</li><li>Reporting, dealing with the cash register, and communicating with suppliers.</li>",
+                    vol1_title: "Swimming teacher, tutor | <a href='#'>European Solidarity Corps</a>", vol1_loc: "Craiova, Romania",
+                    vol1_desc: "Organizing non-formal education classes, promoting healthy lifestyle and European values, teaching swimming to kids.",
+                    vol2_title: "Carpenter, gardener, handyman", vol2_loc: "Georgia", vol2_desc: "Creating wooden furniture in remote villages and caring for adults with disabilities.",
+                    skills_lang_title: "Skills & Languages", skills_subtitle: "Skills", lang_subtitle: "Languages",
+                    lang_header_lang: "Language", lang_header_level: "Level",
+                    lang_ru: "Russian", lang_en: "English", lang_sk: "Slovak", lang_de: "German", lang_fr: "French",
+                    level_native: "Native",
+                    pubs_title: "Publications & Achievements", download_pdf: "Download PDF",
+                    pub1_title: "Case Research on Misuse of AI", pub1_date: "2024", pub1_desc: "Part of the Student Scientific Activity at Matej Bel University.",
+                    pub2_title: "International Business Competition Winner", pub2_date: "2025", pub2_desc: "Team-leader of the winning team in the competition organized by the <a href='#'>Visegrad Fund</a>.",
+                    about_title: "About Me",
+                    about_text: "Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, international projects, and volunteer work across Europe. I am passionate about cultural exchange, continuous learning, and creating positive experiences for others, whether in a classroom, on a tour, or during a community event.",
+                    interests_title: "Hobbies and Interests",
+                    interests_list: "<li>Traveling and exploring different cultures</li><li>Playing the piano</li><li>Photography</li><li>Learning new languages</li><li>Woodworking and handicrafts</li>",
+                },
+                ru: {
+                    page_title: "Михаил Лысый | Персональный сайт",
+                    name: "Михаил Лысый",
+                    subtitle: "Учитель английского | Путешественник | Организатор",
+                    tab_home: "Главная", tab_cv: "Резюме", tab_publications: "Публикации", tab_about: "Обо мне",
+                    home_title: "Контактная информация", email_label: "Email:", social_label: "Социальные сети:",
+                    cv_title: "Резюме", download_cv: "📄 Скачать резюме",
+                    education_title: "Образование", work_title: "Опыт работы", volunteer_title: "Волонтерская работа",
+                    edu1_title: "Бакалавр экономики и управления в бизнесе", edu1_uni: "<a href='#'>Университет Матея Бела</a>", edu1_loc: "Банска-Бистрица, Словакия",
+                    edu1_desc: "<li>Студенческая научная деятельность - 2024 - Исследование злоупотреблений ИИ.</li><li>Международный бизнес-конкурс от Вышеградского фонда - 2025 - капитан команды-победителя.</li>",
+                    edu2_title: "Бакалавр делового администрирования в международном бизнесе", edu2_uni: "<a href='#'>Университет прикладных наук Лапландии</a>", edu2_loc: "Рованиеми, Финляндия",
+                    edu2_desc: "Не окончено из-за нехватки средств.",
+                    work1_title: "Преподаватель английского языка | Частная практика",
+                    work1_desc: "<li>Поиск методологии и создание индивидуальных программ обучения.</li><li>Успешно обучил 5 студентов с начального до разговорного уровня.</li><li>Подготовка к экзаменам SAT, IELTS, TOEFL.</li>",
+                    work2_title: "Сафари-гид | <a href='#'>Lapland Welcome LTD</a>",
+                    work2_desc: "<li>Работа в международной команде и проведение зимних туристических мероприятий.</li><li>Обучение младших гидов для работы на сафари.</li><li>Продажа туров, обновление баз данных, коммуникация с партнерами.</li>",
+                    work3_title: "Младший технический специалист | <a href='#'>Uberfon</a>", work3_loc: "Санкт-Петербург, Россия",
+                    work3_desc: "<li>Выполнение профессионального ремонта устройств Apple.</li><li>Быстрое изучение особенностей новых продуктов Apple и процессов ремонта.</li><li>Ведение отчетности, работа с кассой и общение с поставщиками.</li>",
+                    vol1_title: "Учитель плавания, тьютор | <a href='#'>Европейский корпус солидарности</a>", vol1_loc: "Крайова, Румыния",
+                    vol1_desc: "Организация неформальных образовательных занятий, продвижение здорового образа жизни и европейских ценностей, обучение детей плаванию.",
+                    vol2_title: "Плотник, садовник, мастер", vol2_loc: "Грузия", vol2_desc: "Создание деревянной мебели в отдаленных деревнях и уход за взрослыми с ограниченными возможностями.",
+                    skills_lang_title: "Навыки и языки", skills_subtitle: "Навыки", lang_subtitle: "Языки",
+                    lang_header_lang: "Язык", lang_header_level: "Уровень",
+                    lang_ru: "Русский", lang_en: "Английский", lang_sk: "Словацкий", lang_de: "Немецкий", lang_fr: "Французский",
+                    level_native: "Родной",
+                    pubs_title: "Публикации и достижения", download_pdf: "Скачать PDF",
+                    pub1_title: "Исследование злоупотреблений ИИ", pub1_date: "2024", pub1_desc: "В рамках студенческой научной деятельности в Университете Матея Бела.",
+                    pub2_title: "Победитель международного бизнес-конкурса", pub2_date: "2025", pub2_desc: "Капитан команды-победителя в конкурсе, организованном <a href='#'>Вышеградским фондом</a>.",
+                    about_title: "Обо мне",
+                    about_text: "Привет! Я Михаил, многоязычный специалист с опытом в образовании, туризме, международных проектах и волонтерской работе по всей Европе. Я увлечен культурным обменом, постоянным обучением и созданием позитивного опыта для других, будь то в классе, в туре или на общественном мероприятии.",
+                    interests_title: "Хобби и интересы",
+                    interests_list: "<li>Путешествия и изучение разных культур</li><li>Игра на фортепиано</li><li>Фотография</li><li>Изучение новых языков</li><li>Работа по дереву и ремесла</li>",
+                },
+                de: {
+                    page_title: "Mikhail Lysyi | Persönliche Webseite",
+                    name: "Mikhail Lysyi",
+                    subtitle: "Englischlehrer | Reisender | Organisator",
+                    tab_home: "Start", tab_cv: "Lebenslauf", tab_publications: "Publikationen", tab_about: "Über mich",
+                    home_title: "Kontaktinformationen", email_label: "Email:", social_label: "Soziale Medien:",
+                    cv_title: "Lebenslauf", download_cv: "📄 Lebenslauf herunterladen",
+                    education_title: "Bildung", work_title: "Berufserfahrung", volunteer_title: "Freiwilligenarbeit",
+                    edu1_title: "Bachelor of Business Economics and Management", edu1_uni: "<a href='#'>Matej-Bel-Universität</a>", edu1_loc: "Banská Bystrica, Slowakei",
+                    edu1_desc: "<li>Wissenschaftliche Tätigkeit der Studierenden - 2024 - Fallforschung zum Missbrauch von KI.</li><li>Internationaler Geschäftswettbewerb des Visegrad-Fonds - 2025 - Teamleiter des Gewinnerteams.</li>",
+                    edu2_title: "Bachelor of Business Administration in International Business", edu2_uni: "<a href='#'>Fachhochschule Lappland</a>", edu2_loc: "Rovaniemi, Finnland",
+                    edu2_desc: "Aufgrund unzureichender Mittel nicht abgeschlossen.",
+                    work1_title: "Englischlehrer | Selbstständig",
+                    work1_desc: "<li>Entwicklung einer Methodik und Erstellung individueller Studienprogramme.</li><li>Erfolgreich 5 Schüler vom Anfänger- bis zum Konversationsniveau unterrichtet.</li><li>Vorbereitung auf SAT, IELTS, TOEFL.</li>",
+                    work2_title: "Safari-Guide | <a href='#'>Lapland Welcome LTD</a>",
+                    work2_desc: "<li>Arbeit in einem internationalen Team und Durchführung von Wintertourismusaktivitäten.</li><li>Ausbildung von Junior-Guides für die Arbeit als Safari-Guides.</li><li>Verkauf von Touren, Datenbankaktualisierung, Kommunikation mit Partnern.</li>",
+                    work3_title: "Junior Technischer Spezialist | <a href='#'>Uberfon</a>", work3_loc: "Sankt Petersburg, Russland",
+                    work3_desc: "<li>Durchführung professioneller Reparaturen an Apple-Geräten.</li><li>Schnelles Erlernen neuer Apple-Produktfunktionen und Reparaturprozesse.</li><li>Berichterstattung, Kassenführung und Kommunikation mit Lieferanten.</li>",
+                    vol1_title: "Schwimmlehrer, Tutor | <a href='#'>Europäisches Solidaritätskorps</a>", vol1_loc: "Craiova, Rumänien",
+                    vol1_desc: "Organisation von nicht-formalen Bildungskursen, Förderung eines gesunden Lebensstils und europäischer Werte, Schwimmunterricht für Kinder.",
+                    vol2_title: "Tischler, Gärtner, Handwerker", vol2_loc: "Georgien", vol2_desc: "Herstellung von Holzmöbeln in abgelegenen Dörfern und Betreuung von Erwachsenen mit Behinderungen.",
+                    skills_lang_title: "Fähigkeiten & Sprachen", skills_subtitle: "Fähigkeiten", lang_subtitle: "Sprachen",
+                    lang_header_lang: "Sprache", lang_header_level: "Niveau",
+                    lang_ru: "Russisch", lang_en: "Englisch", lang_sk: "Slowakisch", lang_de: "Deutsch", lang_fr: "Französisch",
+                    level_native: "Muttersprache",
+                    pubs_title: "Publikationen & Erfolge", download_pdf: "PDF herunterladen",
+                    pub1_title: "Fallforschung zum Missbrauch von KI", pub1_date: "2024", pub1_desc: "Teil der wissenschaftlichen Tätigkeit der Studierenden an der Matej-Bel-Universität.",
+                    pub2_title: "Gewinner des Internationalen Geschäftswettbewerbs", pub2_date: "2025", pub2_desc: "Teamleiter des Gewinnerteams im Wettbewerb, organisiert vom <a href='#'>Visegrad-Fonds</a>.",
+                    about_title: "Über mich",
+                    about_text: "Hallo! Ich bin Mikhail, ein mehrsprachiger Fachmann mit Erfahrung in Bildung, Tourismus, internationalen Projekten und Freiwilligenarbeit in ganz Europa. Meine Leidenschaft gilt dem kulturellen Austausch, dem kontinuierlichen Lernen und dem Schaffen positiver Erfahrungen für andere, sei es im Klassenzimmer, auf einer Tour oder bei einer Gemeinschaftsveranstaltung.",
+                    interests_title: "Hobbys und Interessen",
+                    interests_list: "<li>Reisen und Erkunden verschiedener Kulturen</li><li>Klavier spielen</li><li>Fotografie</li><li>Neue Sprachen lernen</li><li>Holzarbeiten und Handwerk</li>",
+                }
+            };
+
+            const langSwitcher = document.querySelector('.language-switcher');
+            
+            const changeLanguage = (lang) => {
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.dataset.langKey;
+                    if (translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang; // Обновляем атрибут lang у html
+            };
+
+            langSwitcher.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    const lang = e.target.dataset.lang;
+                    changeLanguage(lang);
+                }
+            });
+
+            // Устанавливаем язык по умолчанию
+            changeLanguage('en'); 
+        });
+    </script>
 </body>
 </html>
