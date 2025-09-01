@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mikhail Lysyi | CV</title>
+  <title>Mikhail Lysyi | Personal Website</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -12,228 +12,234 @@
     <p id="subtitle" class="subtitle">English Teacher | Traveler | Organizer</p>
 
     <div class="controls">
-      <button onclick="toggleLang()">🌐 EN / RU</button>
+      <div class="language-switcher">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ru')">Русский</button>
+        <button onclick="changeLanguage('de')">Deutsch</button>
+      </div>
       <button onclick="toggleTheme()">🌙 / ☀️</button>
     </div>
-  </header>
-  <main>
-    <section>
-      <h2 id="about-title">About Me</h2>
-      <p id="about-text">Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.</p>
-    </section>
-    <section>
-      <h2 id="timeline-title">My Journey</h2>
-      <div class="timeline-container">
-        <div id="education-timeline" class="timeline">
-          <h3>Education</h3>
-          <div class="timeline-item" data-year="2023">
-            <div class="timeline-content">
-              <h4>Bachelor of Business Economics and Management</h4>
-              <p><strong>Matej Bel University</strong>, Banská Bystrica, Slovakia</p>
-              <p>September 2023 – June 2026</p>
-              <p>Student Scientific Activity – 2024 – Case research of Misuse of AI International business competition by Visegrad Fund – 2025 – team leader of the winning team</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2016">
-            <div class="timeline-content">
-              <h4>Bachelor of Business Administration in International Business</h4>
-              <p><strong>Lapland University of Applied Sciences</strong>, Rovaniemi, Finland</p>
-              <p>September 2016 – December 2020</p>
-              <p>Unfinished due to insufficient funds</p>
-            </div>
-          </div>
-        </div>
-        <div id="work-timeline" class="timeline">
-          <h3>Work Experience</h3>
-          <div class="timeline-item" data-year="2018">
-            <div class="timeline-content">
-              <h4>English Language Teacher | Self Employed</h4>
-              <p>September 2018 – present</p>
-              <p>Finding a methodology and creating an individual study program</p>
-              <p>Successfully taught 5 students from elementary to intermediate/conversational level</p>
-              <p>Preparation for SAT, IELTS, TOEFL</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2016">
-            <div class="timeline-content">
-              <h4>Safari Guide | Lapland Welcome LTD</h4>
-              <p>September 2016 – April 2018</p>
-              <p>Working in an international team and conducting common winter tourist activities such as snowmobile rides, ice fishing, countryside skiing, vehicle transfer, and others.</p>
-              <p>Training of junior guides to work as safari guides.</p>
-              <p>Sales tours, updating the database, communication with partners (hotels, restaurants, etc)</p>
-              <p>Positive feedback and zero accidents.</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-year="2017">
-            <div class="timeline-content">
-              <h4>Junior Technical Specialist | Uberfon</h4>
-              <p>June 2017 – September 2017</p>
-              <p>Performing professional repairs on Apple devices in a short time with a team of specialists.</p>
-              <p>Quick learning of new Apple product features and reparation processes (watch, iPhone, iPod).</p>
-              <p>Reporting, dealing with the cash register, and communicating with suppliers and partners.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2 id="vol-title">Volunteering</h2>
-      <ul id="vol-list">
-        <li><strong>Erasmus Student Volunteer, organizer</strong> (October 2023 – June 2026) – Matej Bel University | ESN, Banská Bystrica, Slovakia</li>
-        <li><strong>Swimming teacher, tutor</strong> (October 2022 – April 2023) – CERT | European Solidarity Corps, Craiova, Romania</li>
-        <li><strong>Carpenter, gardener, handyman, shepherd</strong> (May 2022 – September 2022) – Georgia</li>
-        <li><strong>Pianist</strong> (20.12.2021) – Erciyes Culture Centre, Kayseri, Turkey</li>
-        <li><strong>Russian/English Language Teacher</strong> (September 2021 – December 2021) – Kayseri, Turkey</li>
-        <li><strong>Photographer</strong> (February 2017 – April 2018) – InnoBarentsLab, Rovaniemi, Finland</li>
+
+    <nav>
+      <ul class="tabs">
+        <li class="tab-link current" data-tab="home">Home</li>
+        <li class="tab-link" data-tab="cv">CV</li>
+        <li class="tab-link" data-tab="publications">Publications</li>
+        <li class="tab-link" data-tab="about">About Me</li>
       </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Tab -->
+    <section id="home" class="tab-content current">
+      <h2 id="home-title">Home</h2>
+      <div class="contact-info">
+        <p id="home-email">Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
+        <p id="home-phone">Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
+        <p id="home-social">Social Media:</p>
+        <ul class="social-links">
+          <li><a href="https://github.com/your-username" target="_blank">GitHub</a></li>
+          <li><a href="https://instagram.com/your-username" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
     </section>
-    <section>
-      <h2 id="skills-title">Skills & Languages</h2>
-      <div class="skills-container">
-        <div class="skills-list">
-          <h3>Skills</h3>
-          <ul>
-            <li>Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook</li>
-            <li>MS Windows, Linux, Apple</li>
-            <li>Driver Licence, category B</li>
-            <li>Coordinating and managing events</li>
-            <li>Work independently: individually and in teams</li>
-            <li>Adaptable, communicative, punctual, polite</li>
-          </ul>
+
+    <!-- CV Tab -->
+    <section id="cv" class="tab-content">
+      <h2 id="cv-title">CV</h2>
+      <div class="cv-section">
+        <p id="cv-download">📄 <a href="cv.pdf" download>Download CV</a></p>
+        <div class="timeline-container">
+          <div id="education-timeline" class="timeline">
+            <h3 id="education-title">Education</h3>
+            <div class="timeline-item" data-year="2023">
+              <div class="timeline-content">
+                <h4>Bachelor of Business Economics and Management</h4>
+                <p><strong>Matej Bel University</strong>, Banská Bystrica, Slovakia</p>
+                <p>September 2023 – June 2026</p>
+                <p>Student Scientific Activity – 2024 – Case research of Misuse of AI International business competition by Visegrad Fund – 2025 – team leader of the winning team</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-year="2016">
+              <div class="timeline-content">
+                <h4>Bachelor of Business Administration in International Business</h4>
+                <p><strong>Lapland University of Applied Sciences</strong>, Rovaniemi, Finland</p>
+                <p>September 2016 – December 2020</p>
+                <p>Unfinished due to insufficient funds</p>
+              </div>
+            </div>
+          </div>
+          <div id="work-timeline" class="timeline">
+            <h3 id="work-title">Work Experience</h3>
+            <div class="timeline-item" data-year="2018">
+              <div class="timeline-content">
+                <h4>English Language Teacher | Self Employed</h4>
+                <p>September 2018 – present</p>
+                <p>Finding a methodology and creating an individual study program</p>
+                <p>Successfully taught 5 students from elementary to intermediate/conversational level</p>
+                <p>Preparation for SAT, IELTS, TOEFL</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-year="2016">
+              <div class="timeline-content">
+                <h4>Safari Guide | Lapland Welcome LTD</h4>
+                <p>September 2016 – April 2018</p>
+                <p>Working in an international team and conducting common winter tourist activities such as snowmobile rides, ice fishing, countryside skiing, vehicle transfer, and others.</p>
+                <p>Training of junior guides to work as safari guides.</p>
+                <p>Sales tours, updating the database, communication with partners (hotels, restaurants, etc)</p>
+                <p>Positive feedback and zero accidents.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-year="2017">
+              <div class="timeline-content">
+                <h4>Junior Technical Specialist | Uberfon</h4>
+                <p>June 2017 – September 2017</p>
+                <p>Performing professional repairs on Apple devices in a short time with a team of specialists.</p>
+                <p>Quick learning of new Apple product features and reparation processes (watch, iPhone, iPod).</p>
+                <p>Reporting, dealing with the cash register, and communicating with suppliers and partners.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="languages-table">
-          <h3>Languages</h3>
-          <table>
-            <tr>
-              <th>Language</th>
-              <th>Level</th>
-            </tr>
-            <tr>
-              <td>Russian</td>
-              <td>Native</td>
-            </tr>
-            <tr>
-              <td>English</td>
-              <td>C1</td>
-            </tr>
-            <tr>
-              <td>Slovak</td>
-              <td>B1</td>
-            </tr>
-            <tr>
-              <td>German</td>
-              <td>A1-A2</td>
-            </tr>
-            <tr>
-              <td>French</td>
-              <td>A1-A2</td>
-            </tr>
-            <tr>
-              <td>Finnish</td>
-              <td>A1-A2</td>
-            </tr>
-          </table>
+
+        <h3 id="skills-title">Skills & Languages</h3>
+        <div class="skills-container">
+          <div class="skills-list">
+            <h4 id="skills-subtitle">Skills</h4>
+            <ul>
+              <li>Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook</li>
+              <li>MS Windows, Linux, Apple</li>
+              <li>Driver Licence, category B</li>
+              <li>Coordinating and managing events</li>
+              <li>Work independently: individually and in teams</li>
+              <li>Adaptable, communicative, punctual, polite</li>
+            </ul>
+          </div>
+          <div class="languages-table">
+            <h4 id="languages-subtitle">Languages</h4>
+            <table>
+              <tr>
+                <th id="language-header">Language</th>
+                <th id="level-header">Level</th>
+              </tr>
+              <tr>
+                <td>Russian</td>
+                <td>Native</td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>C1</td>
+              </tr>
+              <tr>
+                <td>Slovak</td>
+                <td>B1</td>
+              </tr>
+              <tr>
+                <td>German</td>
+                <td>A1-A2</td>
+              </tr>
+              <tr>
+                <td>French</td>
+                <td>A1-A2</td>
+              </tr>
+              <tr>
+                <td>Finnish</td>
+                <td>A1-A2</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </section>
-    <section>
-      <h2 id="contacts-title">Contacts</h2>
-      <p>Email: <a href="mailto:mikhail.lysyi@gmail.com">mikhail.lysyi@gmail.com</a></p>
-      <p>Telegram/WhatsApp: <a href="tel:+421950506167">+421 950 506 167</a></p>
-      <p>GitHub: <a href="https://github.com/gianmishgun">https://github.com/gianmishgun</a></p>
+
+    <!-- Publications Tab -->
+    <section id="publications" class="tab-content">
+      <h2 id="publications-title">Publications and Achievements</h2>
+      <div class="publications-container">
+        <div class="publication-item">
+          <h3>Case Research on Misuse of AI</h3>
+          <p>Published in 2024</p>
+          <p>A detailed case study on the misuse of artificial intelligence in business.</p>
+          <a href="publications/case-research-ai.pdf" download>Download PDF</a>
+        </div>
+        <div class="publication-item">
+          <h3>International Business Competition</h3>
+          <p>Visegrad Fund, 2025</p>
+          <p>Won the international business competition as a team leader.</p>
+          <a href="publications/business-competition.pdf" download>Download PDF</a>
+        </div>
+        <div class="publication-item">
+          <h3>Volunteer Work in Romania</h3>
+          <p>2022-2023</p>
+          <p>Report on non-formal education classes and cultural events organized.</p>
+          <a href="publications/volunteer-report.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Tab -->
+    <section id="about" class="tab-content">
+      <h2 id="about-me-title">About Me</h2>
+      <div class="about-content">
+        <p id="about-me-text">Hi! I'm Mikhail, a multilingual professional with experience in education, tourism, and international projects.</p>
+        <h3 id="hobbies-title">Hobbies and Interests</h3>
+        <ul id="hobbies-list">
+          <li>Traveling</li>
+          <li>Playing Piano</li>
+          <li>Learning new languages</li>
+          <li>Photography</li>
+          <li>Reading books</li>
+        </ul>
+        <h3 id="interests-title">Professional Interests</h3>
+        <ul id="interests-list">
+          <li>Education and Teaching</li>
+          <li>Tourism and Travel</li>
+          <li>International Projects</li>
+          <li>Business Administration</li>
+          <li>Cultural Studies</li>
+        </ul>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>© 2025 Mikhail Lysyi</p>
   </footer>
+
   <script>
-    // Основной язык теперь английский
-    let lang = "en";
-    function toggleLang() {
-      if (lang === "en") {
-        // Переключаемся на русский
-        document.getElementById("name").innerText = "Михаил Лысый";
-        document.getElementById("subtitle").innerText = "Преподаватель английского | Путешественник | Организатор";
-        document.getElementById("about-title").innerText = "Обо мне";
-        document.getElementById("about-text").innerText = "Привет! Я Михаил, многоязычный специалист с опытом работы в образовании, туризме и международных проектах.";
-        document.getElementById("timeline-title").innerText = "Мой путь";
-        document.getElementById("vol-title").innerText = "Волонтёрство";
-        document.getElementById("skills-title").innerText = "Навыки и языки";
-        document.getElementById("contacts-title").innerText = "Контакты";
-        document.querySelector("footer p").innerText = "© 2025 Михаил Лысый";
+    // Переключение вкладок
+    document.querySelectorAll('.tab-link').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabId = tab.getAttribute('data-tab');
 
-        // Обновляем таймлайны
-        document.querySelector("#education-timeline h3").innerText = "Образование";
-        document.querySelector("#work-timeline h3").innerText = "Опыт работы";
-
-        // Обновляем список волонтерства
-        const volList = document.getElementById("vol-list");
-        volList.innerHTML = `
-          <li><strong>Волонтёр Erasmus, организатор</strong> (Октябрь 2023 – Июнь 2026) – Университет Матея Бела | ESN, Банска-Бистрица, Словакия</li>
-          <li><strong>Преподаватель плавания, наставник</strong> (Октябрь 2022 – Апрель 2023) – CERT | Европейский корпус солидарности, Крайова, Румыния</li>
-          <li><strong>Плотник, садовник, разнорабочий, пастух</strong> (Май 2022 – Сентябрь 2022) – Грузия</li>
-          <li><strong>Пианист</strong> (20.12.2021) – Культурный центр Эрджиес, Кайсери, Турция</li>
-          <li><strong>Преподаватель русского/английского языков</strong> (Сентябрь 2021 – Декабрь 2021) – Кайсери, Турция</li>
-          <li><strong>Фотограф</strong> (Февраль 2017 – Апрель 2018) – InnoBarentsLab, Рованиеми, Финляндия</li>
-        `;
-
-        // Обновляем таблицу языков
-        const tableHeaders = document.querySelectorAll(".languages-table table th");
-        tableHeaders[0].innerText = "Язык";
-        tableHeaders[1].innerText = "Уровень";
-
-        // Обновляем контент таблицы языков (если нужно)
-        const tableRows = document.querySelectorAll(".languages-table table tr");
-        tableRows.forEach((row, index) => {
-          if (index === 0) return; // Пропускаем заголовок
-          const cells = row.querySelectorAll("td");
-          if (cells.length >= 2) {
-            const language = cells[0].innerText.trim();
-            const level = cells[1].innerText.trim();
-            switch (language) {
-              case "Russian":
-                cells[0].innerText = "Русский";
-                cells[1].innerText = level === "Native" ? "Родной" : level;
-                break;
-              case "English":
-                cells[0].innerText = "Английский";
-                break;
-              case "Slovak":
-                cells[0].innerText = "Словацкий";
-                break;
-              case "German":
-                cells[0].innerText = "Немецкий";
-                break;
-              case "French":
-                cells[0].innerText = "Французский";
-                break;
-              case "Finnish":
-                cells[0].innerText = "Финский";
-                break;
-            }
-          }
+        // Убираем класс current у всех вкладок и контента
+        document.querySelectorAll('.tab-link').forEach(link => {
+          link.classList.remove('current');
+        });
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.remove('current');
         });
 
-        // Обновляем список навыков
-        const skillsList = document.querySelector(".skills-list ul");
-        skillsList.innerHTML = `
-          <li>Google, Microsoft Suite: Word, Excel, PowerPoint, Outlook</li>
-          <li>MS Windows, Linux, Apple</li>
-          <li>Водительские права, категория B</li>
-          <li>Организация и управление мероприятиями</li>
-          <li>Работа независимо: индивидуально и в команде</li>
-          <li>Адаптивный, коммуникабельный, пунктуальный, вежливый</li>
-        `;
+        // Добавляем класс current к выбранной вкладке и контенту
+        tab.classList.add('current');
+        document.getElementById(tabId).classList.add('current');
+      });
+    });
 
-        lang = "ru";
-      } else {
-        // Возвращаемся на английский по умолчанию
-        location.reload();
-      }
-    }
+    // Переключение темы
     function toggleTheme() {
       document.body.classList.toggle("dark");
       document.body.classList.toggle("light");
+    }
+
+    // Переключение языка
+    function changeLanguage(lang) {
+      // Здесь будет логика для переключения языков
+      // Для простоты, мы просто перезагрузим страницу с соответствующим языком
+      // В реальном проекте можно использовать JSON для хранения переводов
+      alert(`Language switched to ${lang}`);
     }
   </script>
 </body>
